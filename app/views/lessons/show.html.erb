@@ -1,0 +1,104 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title lesson:</strong>
+  <%= @lesson.title_lesson %>
+</p>
+
+<p>
+  <strong>Title unit:</strong>
+  <%= @lesson.title_unit %>
+</p>
+
+<p>
+  <strong>Title content:</strong>
+  <%= @lesson.title_content %>
+</p>
+
+<p>
+  <strong>Last lesson time:</strong>
+  <%= @lesson.last_lesson_time %>
+</p>
+
+<p>
+  <strong>Last lesson content:</strong>
+  <%= @lesson.last_lesson_content %>
+</p>
+
+<p>
+  <strong>Object:</strong>
+  <%= @lesson.object %>
+</p>
+
+<p>
+  <strong>Intro time:</strong>
+  <%= @lesson.intro_time %>
+</p>
+
+<p>
+  <strong>Intro content:</strong>
+  <%= @lesson.intro_content %>
+</p>
+
+<p>
+  <strong>Practice time:</strong>
+  <%= @lesson.practice_time %>
+</p>
+
+<p>
+  <strong>Practice content:</strong>
+  <%= @lesson.practice_content %>
+</p>
+
+<p>
+  <strong>Working time:</strong>
+  <%= @lesson.working_time %>
+</p>
+
+<p>
+  <strong>Working content:</strong>
+  <%= @lesson.working_content %>
+</p>
+
+<p>
+  <strong>Diff support:</strong>
+  <%= @lesson.diff_support %>
+</p>
+
+<p>
+  <strong>Diff enrich:</strong>
+  <%= @lesson.diff_enrich %>
+</p>
+
+<p>
+  <strong>Assess time:</strong>
+  <%= @lesson.assess_time %>
+</p>
+
+<p>
+  <strong>Assess content:</strong>
+  <%= @lesson.assess_content %>
+</p>
+
+<p>
+  <strong>Review time:</strong>
+  <%= @lesson.review_time %>
+</p>
+
+<p>
+  <strong>Review content:</strong>
+  <%= @lesson.review_content %>
+</p>
+
+<p>
+  <strong>Grade:</strong>
+  <%= @lesson.grade.name %>
+</p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @lesson.subject.name %>
+</p>
+
+<%= link_to 'Edit', edit_lesson_path(@lesson) %> |
+<%= link_to 'Back', lessons_path %>

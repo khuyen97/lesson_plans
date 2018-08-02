@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+  <div class="col-sm">  
+    <%= render "lessons/filter" %>
+  </div>
+  <div class="col-sm">
+    Lessons
+    <ol>
+      <% @lessons.each do |lesson| %>
+        <li><%= link_to lesson.title_content, lesson %></li>
+      <% end %>
+    </ol>
+  </div>
+</div>
+<br>
+
+<%= link_to 'New Lesson', new_lesson_path %>

@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title_lesson: 1
+  title_unit: 1
+  title_content: MyString
+  last_lesson_time: 1
+  last_lesson_content: MyText
+  object: MyString
+  intro_time: 1
+  intro_content: MyText
+  practice_time: 1
+  practice_content: MyText
+  working_time: 1
+  working_content: MyText
+  diff_support: MyText
+  diff_enrich: MyText
+  assess_time: 1
+  assess_content: MyText
+  review_time: 1
+  review_content: MyText
+
+two:
+  title_lesson: 1
+  title_unit: 1
+  title_content: MyString
+  last_lesson_time: 1
+  last_lesson_content: MyText
+  object: MyString
+  intro_time: 1
+  intro_content: MyText
+  practice_time: 1
+  practice_content: MyText
+  working_time: 1
+  working_content: MyText
+  diff_support: MyText
+  diff_enrich: MyText
+  assess_time: 1
+  assess_content: MyText
+  review_time: 1
+  review_content: MyText
