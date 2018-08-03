@@ -1,0 +1,119 @@
+@import "bootstrap";
+
+.navbar {
+  background-color: #42b587;
+  background-image: linear-gradient(56deg, #2fa89e, #42b587);
+  color: #fff;
+  height: 50px;
+  line-height: 50px;
+  box-sizing: border-box;
+  position: relative;
+  box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.4);
+}
+
+// header
+.navbar .navbar-brand {
+  color: white;
+}
+
+.navbar .navbar-brand:hover {
+  color: white;
+}
+
+.navbar-brand img {
+  height: 2em;
+  display: inline-block;
+  line-height: 50px;
+  font-family: "edicons";
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  margin-right: -0.1em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: .2em;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+.navbar-light .navbar-nav .nav-link {
+  color: white;
+  margin-top: 0.3em;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: white;
+}
+
+//body
+body {
+  background: #f2f2f2;
+  font-family: ProximaNova, Arial, sans-serif;
+}
+
+.row {
+   margin: 0;
+ }
+
+.card {
+  border: 1px solid #ccc;
+  display: flex;
+}
+.card-header {
+  //background-color: #42b587;
+  //color: white
+}
+.card-header > a {
+  //color: white;
+}
+.card-header > a:hover {
+  //color: white;
+}
+
+.card-body > li {
+  position: relative;
+  display: block;
+  color: #222;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-width: 0 0 1px 0;
+}
+
+.card-link {
+  color: #666;
+}
+
+.card-link:hover {
+  color: #666;
+}
+
+li {
+  list-style: none
+}
+
+li.title {
+  font-size: 25px;
+  font-family: ProximaNova-Light, Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #666;
+  border: 1px solid #ccc;
+  border-width: 1px 0;
+  padding: 5px 0;
+  margin-bottom: 6px;
+}
+
+.filter-button {
+  margin-left: 40px;
+}
+
+.lesson-group {
+  margin-right: 20px;
+}
+
+.lesson-link:hover {
+  text-decoration: none;
+}
+

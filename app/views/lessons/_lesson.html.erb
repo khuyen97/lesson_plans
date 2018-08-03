@@ -1,0 +1,13 @@
+
+<div class="card border-success mb-3">    
+  <div class="card-header">
+    <%= lesson.subject.name + " - " + lesson.grade.name %>
+  </div>
+  <div class="card-body text-dark">
+    <h5 class="card-title"><%= link_to lesson.title_content, lesson %></h5>
+    <p class="card-text"><%= lesson.intro_content %></p>
+  </div>
+  <div class="card-footer">
+    <small class="text-muted">Last updated 3 mins ago</small>
+  </div>
+</div>

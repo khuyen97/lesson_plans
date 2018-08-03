@@ -1,0 +1,117 @@
+<%= form_with(model: lesson, local: true) do |form| %>
+  <% if lesson.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(lesson.errors.count, "error") %> prohibited this lesson from being saved:</h2>
+
+      <ul>
+      <% lesson.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :grade %>
+    <%= form.collection_select :grade_id, @grades, :id, :name, {}, class: "custom-select" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :subject %>
+    <%= form.collection_select :subject_id, @subject, :id, :name, {}, class: "custom-select" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :title_lesson %>
+    <%= form.number_field :title_lesson, class: "form-control form-control-sm" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :title_unit %>
+    <%= form.number_field :title_unit, class: "form-control form-control-sm" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :title_content %>
+    <%= form.text_field :title_content, class: "form-control form-control-sm" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :last_lesson_time %>
+    <%= form.number_field :last_lesson_time, class: "form-control form-control-sm" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :last_lesson_content %>
+    <%= form.text_area :last_lesson_content, class: "form-control form-control-sm" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :object %>
+    <%= form.text_field :object, class: "form-control form-control-sm" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :intro_time %>
+    <%= form.number_field :intro_time, class: "form-control form-control-sm" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :intro_content %>
+    <%= form.text_area :intro_content, class: "form-control form-control-sm" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :practice_time %>
+    <%= form.number_field :practice_time, class: "form-control form-control-sm" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :practice_content %>
+    <%= form.text_area :practice_content, class: "form-control form-control-sm" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :working_time %>
+    <%= form.number_field :working_time, class: "form-control form-control-sm" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :working_content %>
+    <%= form.text_area :working_content, class: "form-control form-control-sm" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :diff_support %>
+    <%= form.text_area :diff_support, class: "form-control form-control-sm" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :diff_enrich %>
+    <%= form.text_area :diff_enrich, class: "form-control form-control-sm" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :assess_time %>
+    <%= form.number_field :assess_time, class: "form-control form-control-sm" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :assess_content %>
+    <%= form.text_area :assess_content, class: "form-control form-control-sm" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :review_time %>
+    <%= form.number_field :review_time, class: "form-control form-control-sm" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :review_content %>
+    <%= form.text_area :review_content, class: "form-control form-control-sm" %>
+  </div>
+
+  <div class="form-group">
+      <%= form.submit "Create", class: "btn btn-primary" %>
+  </div>
+<% end %>

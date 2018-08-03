@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-md-3">
+    <div class="search-filter">
+      <%= render "lessons/filter" %>
+    </div>
+  </div>
+  <div class="col-md-9">
+    <div class="lesson-group">
+      <% @lessons.in_groups_of(3) do |group| %>
+        <div class="card-group">
+          <%= render group.compact %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
