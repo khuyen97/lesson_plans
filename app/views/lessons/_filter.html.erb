@@ -1,62 +1,59 @@
-<%= form_tag lessons_path, method: :get do %>
- 
-    
-      <div class="filter-list">
-        <ul>
-          <div class="card border-success mb-3">      
-            <div class="card-header">        
-              <li class="title">
-                <a class="card-link" data-toggle="collapse" href="#collapseOne">
-                By Grade
-                </a>
-              </li>
-            </div>
-            <div id="collapseOne" class="collapse show" data-parent="#accordion">
-              <div class="card-body">
-                <% @grades.each do |grade| %>
-                  <% if params[:grade_id] == grade.id.to_s %>
-                    <li>
-                      <%= check_box_tag 'grade_id', grade.id, true %> <span><%= grade.name %></span>
-                    </li>
-                  <% else %>
-                    <li>
-                      <%= check_box_tag 'grade_id', grade.id %> <span><%= grade.name %></span>
-                    </li>
-                  <% end %>
-                <% end %>
-              </div>
-            </div>
+<%= form_tag lessons_path, method: :get do %>    
+  <div class="filter-list">
+    <ul>
+      <div class="card mb-3">      
+        <div class="card-header text-white">        
+          <li class="title">
+            <a class="card-link" data-toggle="collapse" href="#collapseOne">
+            By Grade
+            </a>
+          </li>
+        </div>
+        <div id="collapseOne" class="collapse" data-parent="#accordion">
+          <div class="card-body">
+            <% @grades.each do |grade| %>
+              <% if params[:grade_id] == grade.id.to_s %>
+                <li>
+                  <%= check_box_tag 'grade_id', grade.id, true %> <span><%= grade.name %></span>
+                </li>
+              <% else %>
+                <li>
+                  <%= check_box_tag 'grade_id', grade.id %> <span><%= grade.name %></span>
+                </li>
+              <% end %>
+            <% end %>
           </div>
-        </ul>
-
-        <ul>
-          <div class="card border-success mb-3">      
-            <div class="card-header">        
-              <li class="title">
-                <a class="card-link" data-toggle="collapse" href="#collapseTwo">
-                  By Subject
-                </a>
-              </li>
-            </div>
-            <div id="collapseTwo" class="collapse show" data-parent="#accordion">
-              <div class="card-body">
-                <% @subjects.each do |subject| %>
-                  <% if params[:subject_id] == subject.id.to_s %>
-                    <li>
-                      <%= check_box_tag 'subject_id', subject.id, true %> <span><%= subject.name %></span>
-                    </li>
-                  <% else %>
-                    <li>
-                        <%= check_box_tag 'subject_id', subject.id %> <span><%= subject.name %></span>
-                    </li>
-                  <% end %>
-                <% end %>
-              </div>
-            </div>
-          </div>
-        </ul>        
-        <div class="filter-button"><%= submit_tag "Filter", class: "btn btn-danger" %></div>
+        </div>
       </div>
-      
+    </ul>
 
+    <ul>
+      <div class="card mb-3">      
+        <div class="card-header text-white">        
+          <li class="title">
+            <a class="card-link" data-toggle="collapse" href="#collapseTwo">
+              By Subject
+            </a>
+          </li>
+        </div>
+        <div id="collapseTwo" class="collapse" data-parent="#accordion">
+          <div class="card-body">
+            <% @subjects.each do |subject| %>
+              <% if params[:subject_id] == subject.id.to_s %>
+                <li>
+                  <%= check_box_tag 'subject_id', subject.id, true %> <span><%= subject.name %></span>
+                </li>
+              <% else %>
+                <li>
+                    <%= check_box_tag 'subject_id', subject.id %> <span><%= subject.name %></span>
+                </li>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </ul>
+    <div class="filter-button"><%= submit_tag "Filter", class: "btn btn-orange" %></div>
+  </div>
+  <br/>
 <% end %>

@@ -49,7 +49,7 @@
 
 //body
 body {
-  background: #f2f2f2;
+  background: #f8f9fa;
   font-family: ProximaNova, Arial, sans-serif;
 }
 
@@ -58,18 +58,14 @@ body {
  }
 
 .card {
-  border: 1px solid #ccc;
   display: flex;
+  border-color: #854555;
+  box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.4);
 }
+
 .card-header {
-  //background-color: #42b587;
-  //color: white
-}
-.card-header > a {
-  //color: white;
-}
-.card-header > a:hover {
-  //color: white;
+  text-align: center;
+  background: #854555;
 }
 
 .card-body > li {
@@ -77,43 +73,48 @@ body {
   display: block;
   color: #222;
   font-size: 14px;
-  border: 1px solid #ccc;
+  border: 1px solid #17a2b8;
   border-width: 0 0 1px 0;
 }
 
 .card-link {
-  color: #666;
+  color: white;
 }
 
 .card-link:hover {
-  color: #666;
+  color: white;
 }
 
-li {
-  list-style: none
+ li {
+  list-style: none;
+  margin: 2px;
 }
 
 li.title {
   font-size: 25px;
-  font-family: ProximaNova-Light, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
-  color: #666;
-  border: 1px solid #ccc;
-  border-width: 1px 0;
-  padding: 5px 0;
-  margin-bottom: 6px;
 }
 
 .filter-button {
   margin-left: 40px;
 }
-
-.lesson-group {
-  margin-right: 20px;
+.btn.btn-orange {
+    background-color: #f7931d;
+    color: #fff;
+}
+.btn.btn-orange:hover:not(.disabled) {
+  background-color: #d97908;
 }
 
 .lesson-link:hover {
   text-decoration: none;
 }
 
+.lesson-title > a {
+  color: #17a2b8;
+}
+
+h6 {
+  font-weight: bold;
+}

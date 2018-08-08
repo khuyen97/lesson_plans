@@ -1,13 +1,18 @@
-
-<div class="card border-success mb-3">    
-  <div class="card-header">
-    <%= lesson.subject.name + " - " + lesson.grade.name %>
-  </div>
-  <div class="card-body text-dark">
-    <h5 class="card-title"><%= link_to lesson.title_content, lesson %></h5>
-    <p class="card-text"><%= lesson.intro_content %></p>
-  </div>
-  <div class="card-footer">
-    <small class="text-muted">Last updated 3 mins ago</small>
+<div class="col-md-4">
+  <div class="card mb-3" style="height: 18rem;">    
+    <div class="card-header text-white">
+      <%= lesson.subject.name + " - " + lesson.grade.name%>
+    </div>
+    <div class="card-body text-dark">
+      <h5 class="card-title">
+        <span class="lesson-title">
+          <%= link_to lesson.title_content, lesson, class: "lesson-link" %>
+        </span>
+      </h5>
+      <p class="card-text"><%= raw(lesson.intro_content.truncate(80)) %></p>
+    </div>
+    <div class="card-footer bg-transparent">
+      <small class="text-muted"><%= time_ago_in_words(lesson.created_at) %> trước.</small>
+    </div>
   </div>
 </div>
