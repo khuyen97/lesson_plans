@@ -9,7 +9,8 @@ Bundler.require(*Rails.groups)
 module LessonPlans
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 5.2    
+    config.load_defaults 5.2
+    config.time_zone = 'Hanoi'
     config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     config.i18n.available_locales = [:en, :vi]
     config.i18n.default_locale = :vi

@@ -5,55 +5,34 @@
         <div class="card-header text-white">        
           <li class="title">
             <a class="card-link" data-toggle="collapse" href="#collapseOne">
-            By Grade
+            Theo khối
             </a>
           </li>
         </div>
         <div id="collapseOne" class="collapse" data-parent="#accordion">
           <div class="card-body">
-            <% @grades.each do |grade| %>
-              <% if params[:grade_id] == grade.id.to_s %>
-                <li>
-                  <%= check_box_tag 'grade_id', grade.id, true %> <span><%= grade.name %></span>
-                </li>
-              <% else %>
-                <li>
-                  <%= check_box_tag 'grade_id', grade.id %> <span><%= grade.name %></span>
-                </li>
-              <% end %>
-            <% end %>
+            <%= render "grade" %>
           </div>
         </div>
       </div>
     </ul>
-
     <ul>
       <div class="card mb-3">      
         <div class="card-header text-white">        
           <li class="title">
             <a class="card-link" data-toggle="collapse" href="#collapseTwo">
-              By Subject
+              Theo môn học
             </a>
           </li>
         </div>
         <div id="collapseTwo" class="collapse" data-parent="#accordion">
           <div class="card-body">
-            <% @subjects.each do |subject| %>
-              <% if params[:subject_id] == subject.id.to_s %>
-                <li>
-                  <%= check_box_tag 'subject_id', subject.id, true %> <span><%= subject.name %></span>
-                </li>
-              <% else %>
-                <li>
-                    <%= check_box_tag 'subject_id', subject.id %> <span><%= subject.name %></span>
-                </li>
-              <% end %>
-            <% end %>
+            <%= render "subject" %>
           </div>
         </div>
       </div>
     </ul>
-    <div class="filter-button"><%= submit_tag "Filter", class: "btn btn-orange" %></div>
+    <div class="filter-button"><%= submit_tag "Lọc", class: "btn btn-orange", style: "width: 100%" %></div>
   </div>
   <br/>
 <% end %>
