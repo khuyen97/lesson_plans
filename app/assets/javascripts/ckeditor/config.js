@@ -32,7 +32,7 @@ CKEDITOR.editorConfig = function( config )
   config.filebrowserUploadUrl = "/ckeditor/attachment_files";
 
   config.allowedContent = true;
-  config.uiColor = '#bf9ac1';
+  config.uiColor = '#17a2b8';
   config.contentsCss = '*/ckeditor/editor.scss';
   // Toolbar groups configuration.
   config.toolbar = [

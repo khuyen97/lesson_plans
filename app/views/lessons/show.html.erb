@@ -1,102 +1,139 @@
 <div class="container">
   <br/>
-  <span class="text-muted"><%= @lesson.created_at.strftime("%B %e, %Y at %I:%M %p") %></span>
-  <strong>Title lesson:</strong>
-  <%= @lesson.title_lesson %>
-  </p>
+  <div>
+    <div>
+      <span class="text-muted">
+        <%= @lesson.created_at.strftime("%I:%M%p, %d/%m/%Y") %>    
+      </span>
+    </div>
+    <div>
+      <span>
+        <%= image_tag("lesson.png", :alt => "lesson-plan-icon", style: "height: 2.5em;") %>
+        <span class="type-lesson-plan">Giáo Án:  </span>
+        <span class="title-content">
+          <%= @lesson.title_content %>
+        </span>
+      </span>    
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-10">     
+      <div>
+        <div>
+          <h4>Kiểm tra bài cũ</h4>
+          <span class="text-muted">
+            (<%= @lesson.last_lesson_time %> phút)
+          </span>
+        </div>
+        <div>
+          <p><%= raw(@lesson.last_lesson_content)%></p>
+        </div>    
+      </div>
 
-  <p>
-    <strong>Title unit:</strong>
-    <%= @lesson.title_unit %>
-  </p>
+      <div>
+        <div>
+          <h4>Mục tiêu bài mới</h4>
+        </div>
+        <div>
+          <p><%= raw(@lesson.object)%></p>
+        </div>    
+      </div>
+      
+      <div>
+        <div>
+          <h4>Giới thiệu bài mới</h4>
+          <span class="text-muted">
+            (<%= @lesson.intro_time %> phút)
+          </span>
+        </div>
+        <div>
+          <p><%= raw(@lesson.intro_content) %></p>
+        </div>    
+      </div>
 
-  <p>
-    <strong>Title content:</strong>
-    <%= @lesson.title_content %>
-  </p>
+      <div>
+        <div>
+          <h4>Giảng bài</h4>
+          <span class="text-muted">
+            (<%= @lesson.instruction_time %> phút)
+          </span>
+        </div>
+        <div>
+          <p><%= raw(@lesson.instruction_content) %></p>
+        </div>    
+      </div>
 
-  <p>
-    <strong>Last lesson time:</strong>
-    <%= @lesson.last_lesson_time %>
-  </p>
+      <div>
+        <div>
+          <h4>Tương tác/ Thực hành có hướng dẫn</h4>
+          <span class="text-muted">
+            (<%= @lesson.practice_time %> phút)
+          </span>
+        </div>
+        <div>
+          <p><%= raw(@lesson.practice_content) %></p>
+        </div>    
+      </div>
 
-  <p>
-    <strong>Last lesson content:</strong>
-    <%= @lesson.last_lesson_content %>
-  </p>
+      <div>
+        <div>
+          <h4>Tương tác/ Thực hành có hướng dẫn</h4>
+          <span class="text-muted">
+            (<%= @lesson.working_time %> phút)
+          </span>
+        </div>
+        <div>
+          <p><%= raw(@lesson.working_content) %></p>
+        </div>    
+      </div>
 
-  <p>
-    <strong>Object:</strong>
-    <%= @lesson.object %>
-  </p>
+      <div>
+        <div>
+          <h4>Nâng cao/ Củng cố</h4>
+        </div>
+        <div>
+          <p>Nâng cao (với học sinh khá): <%= raw(@lesson.diff_support) %></p>
+          <p>Củng cố (với học sinh yếu): <%= raw(@lesson.diff_enrich) %></p>
+        </div>    
+      </div>
 
-  <p>
-    <strong>Intro time:</strong>
-    <%= @lesson.intro_time %>
-  </p>
-
-  <p>
-    <strong>Intro content:</strong>
-    <%= @lesson.intro_content %>
-  </p>
-
-  <p>
-    <strong>Practice time:</strong>
-    <%= @lesson.practice_time %>
-  </p>
-
-  <p>
-    <strong>Practice content:</strong>
-    <%= @lesson.practice_content %>
-  </p>
-
-  <p>
-    <strong>Working time:</strong>
-    <%= @lesson.working_time %>
-  </p>
-
-  <p>
-    <strong>Working content:</strong>
-    <%= @lesson.working_content %>
-  </p>
-
-  <p>
-    <strong>Diff support:</strong>
-    <%= @lesson.diff_support %>
-  </p>
-
-  <p>
-    <strong>Diff enrich:</strong>
-    <%= @lesson.diff_enrich %>
-  </p>
-
-
-  <p>
-    <strong>Assess content:</strong>
-    <%= @lesson.assess_content %>
-  </p>
-
-  <p>
-    <strong>Review time:</strong>
-    <%= @lesson.review_time %>
-  </p>
-
-  <p>
-    <strong>Review content:</strong>
-    <%= @lesson.review_content %>
-  </p>
-
-  <p>
-    <strong>Grade:</strong>
-    <%= @lesson.grade.name %>
-  </p>
-
-  <p>
-    <strong>Subject:</strong>
-    <%= @lesson.subject.name %>
-  </p>
-
-  <%= link_to 'Edit', edit_lesson_path(@lesson) %> |
-  <%= link_to 'Back', lessons_path %>
-
-</div><p id="notice"><%= notice %></p>
+      <div>
+        <div>
+          <h4>Đánh giá/ Tổng kết</h4>
+          <span class="text-muted">
+            (<%= @lesson.review_time %> phút)
+          </span>
+        </div>
+        <div>
+          <p>Đánh giá: <%= raw(@lesson.assess_content) %></p>
+          <p>Tổng kết: <%= raw(@lesson.review_content) %></p>
+        </div>    
+      </div>
+    </div>
+    <div class="col-md-2">
+      <br/>
+      <div class="filter-button"><%= submit_tag "Tải giáo án", class: "btn btn-orange", style: "width: 100%" %>
+      <div>
+        <p>
+          <strong>Khối: </strong>
+          <%= @lesson.grade.name %>
+        </p>
+        <p>
+          <strong>Môn học: </strong>
+          <%= @lesson.subject.name %>
+        </p>
+        <p>
+          <strong>Bài: </strong>
+          <%= @lesson.title_lesson %>
+        </p>
+        <p>
+          <strong> Tiết: </strong>
+          <%= @lesson.title_unit %>
+        </p>
+      </div>
+      
+      <%= link_to 'Edit', edit_lesson_path, class: "lesson-edit" %> |
+      <%= link_to "Delete", lesson_path, method: :delete, data: { confirm: "Are you sure?" }, remote: true, class: "lesson-delete" %>
+    </div>
+  </div

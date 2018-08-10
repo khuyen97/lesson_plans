@@ -20,11 +20,13 @@ class LessonsController < ApplicationController
   def new
     @lesson = Lesson.new
     @grades = Grade.all
-    @subject = Subject.all
+    @subjects = Subject.all
   end
 
   # GET /lessons/1/edit
   def edit
+    @grades = Grade.all
+    @subjects = Subject.all
   end
 
   # POST /lessons

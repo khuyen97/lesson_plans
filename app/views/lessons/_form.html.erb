@@ -18,15 +18,15 @@
     </div>
     <div class="form-group col-md">
       <%= form.label "Môn học:", class: "col-form-label" %>
-      <%= form.collection_select :subject_id, @subject, :id, :name, {}, class: " form-control form-control-sm custom-select" %>
+      <%= form.collection_select :subject_id, @subjects, :id, :name, {}, class: " form-control form-control-sm custom-select" %>
     </div>
     <div class="form-group col-md">
       <%= form.label "Bài:", class: "col-form-label" %>
-      <%= form.number_field :title_lesson, class: "form-control form-control-sm" %>
+      <%= form.number_field :title_lesson, min: 1, class: "form-control form-control-sm" %>
     </div>
     <div class="form-group col-md">
       <%= form.label "Tiết:", class: "col-form-label" %>
-      <%= form.number_field :title_unit, class: "form-control form-control-sm" %>
+      <%= form.number_field :title_unit, min: 1, class: "form-control form-control-sm" %>
     </div>
   </div>
 
@@ -41,7 +41,7 @@
     <div class="form-group col-md-2">
       <h6 style="">Kiểm tra bài cũ:</h6>
       <%= form.label "Thời gian (phút):", class: "col-form-label"%>
-      <%= form.number_field :last_lesson_time, class: "form-control form-control-sm" %>
+      <%= form.number_field :last_lesson_time, min: 1, class: "form-control form-control-sm" %>
     </div>
   </div>
   <div class="row">
@@ -61,10 +61,11 @@
   <div class="row">
     <h6 class="col-md">Giới thiệu bài mới</h6>
   </div>
+
   <div class="row">
     <div class="form-group col-md-2">
       <%= form.label "Thời gian (phút):" %>
-      <%= form.number_field :intro_time, class: "form-control form-control-sm" %>
+      <%= form.number_field :intro_time, min: 1, class: "form-control form-control-sm" %>
     </div> 
   </div>
   <div class="row">
@@ -80,7 +81,7 @@
   <div class="row">
     <div class="form-group col-md-2">
       <%= form.label "Thời gian (phút):" %>
-      <%= form.number_field :instruction_time, class: "form-control form-control-sm" %>
+      <%= form.number_field :instruction_time, min: 1, class: "form-control form-control-sm" %>
     </div>
   </div>
   <div class="row">
@@ -96,7 +97,7 @@
   <div class="row">
     <div class="form-group col-md-2">
       <%= form.label "Thời gian (phút):" %>
-      <%= form.number_field :practice_time, class: "form-control form-control-sm" %>
+      <%= form.number_field :practice_time, min: 1, class: "form-control form-control-sm" %>
     </div>
   </div>
 
@@ -113,7 +114,7 @@
   <div class="row">
     <div class="form-group col-md-2">
       <%= form.label "Thời gian (phút):" %>
-      <%= form.number_field :working_time, class: "form-control form-control-sm" %>
+      <%= form.number_field :working_time, min: 1, class: "form-control form-control-sm" %>
     </div>
   </div>
   <div class="row">
@@ -129,7 +130,7 @@
   <div class="row">
     <div class="form-group col-md-2">
       <%= form.label "Thời gian (phút):" %>
-      <%= form.number_field :diff_time, class: "form-control form-control-sm" %>
+      <%= form.number_field :diff_time, min: 1, class: "form-control form-control-sm" %>
     </div> 
   </div>  
   <div class="row">
@@ -150,7 +151,7 @@
   <div class="row">
     <div class="form-group col-md-2">
       <%= form.label "Thời gian (phút):" %>
-      <%= form.number_field :review_time, class: "form-control form-control-sm" %>
+      <%= form.number_field :review_time, min: 1, class: "form-control form-control-sm" %>
     </div> 
   </div>  
   <div class="row">
@@ -166,7 +167,7 @@
 
   <div class="row">
     <div class="form-group col-md-2">
-      <%= form.submit "Create", class: "btn btn-orange" %>
+      <%= form.submit "Create", class: "btn btn-orange", style: "width: 100%" %>
     </div>
   </div>
   <br/> 
