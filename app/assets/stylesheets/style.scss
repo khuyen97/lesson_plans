@@ -50,7 +50,7 @@
 
 //body
 body {
-  background: white;
+  background: #f8f9fa;
 }
 
 .card {
@@ -117,7 +117,7 @@ li .title {
 .btn.btn-orange {
   background-color: #f7931d;
   color: #fff;
-  &::hover:not(.disabled) {
+  &:hover:not(.disabled) {
     background-color: #d97908;
   }
 }

@@ -2,7 +2,6 @@
   <% if @lesson.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(lesson.errors.count, "error") %> prohibited this lesson from being saved:</h2>
-
       <ul>
       <% @lesson.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -143,7 +142,6 @@
       <%= form.text_area :diff_enrich, class: "ckeditor" %>
     </div>
   </div>
-
 
   <div class="row">
     <h6 class="col-md">Đánh giá/ Tổng kết</h6>
