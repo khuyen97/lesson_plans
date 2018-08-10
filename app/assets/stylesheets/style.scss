@@ -51,6 +51,7 @@
 //body
 body {
   background: #f8f9fa;
+  font-size: 15px;
 }
 
 .card {
@@ -122,6 +123,10 @@ li .title {
   }
 }
 
+.lesson-card {
+  margin-bottom: 24px;
+}
+
 .lesson-link:hover {
   text-decoration: none;
 }
@@ -145,4 +150,20 @@ h6 {
 
 .title-content {
   font-size: 32px;
+}
+
+.lesson-details {
+  padding: 15px;
+  border-radius: 5px
+}
+
+h4 {
+  display: inline;
+}
+
+.lesson-title {
+  padding: 10px;
+}
+
+.lesson-time {
 }
