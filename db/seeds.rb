@@ -16,5 +16,10 @@ subjects = ["Toán", "Vật lí", "Hóa học", "Sinh học", "Tiếng Anh",
            "Ngữ Văn", "Tiếng Việt", "Lịch sử", "Địa lí"].sort!
 subjects.map do |subject|
     Subject.create!(name: subject)
+
+User.create!(email: "admin@gmail.com",
+            password: "password",
+            password_confirmation: "password",
+            admin: true)
 end
  
