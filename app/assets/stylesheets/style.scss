@@ -17,7 +17,19 @@
   color: white;
 }
 
+.navbar .navbar-brand span {
+  vertical-align: middle;
+}
+
 .navbar .navbar-brand:hover {
+  color: white;
+}
+
+.nav-link {
+  color: white;
+}
+
+.dropdown .dropdown-toggle {
   color: white;
 }
 
@@ -146,10 +158,12 @@ h6 {
   color: #854555;
   font-size: 32px;
   padding-top: 10px;
+  vertical-align: middle;
 }
 
 .title-content {
   font-size: 32px;
+  vertical-align: middle;
 }
 
 .lesson-details {
@@ -157,7 +171,7 @@ h6 {
   border-radius: 5px
 }
 
-h4 {
+h5 {
   display: inline;
 }
 
@@ -166,4 +180,16 @@ h4 {
 }
 
 .lesson-time {
+}
+
+.text-justify p{
+  padding-left: 15px;
+}
+
+.col-md-9{
+  padding-block-end: 10px;
+}
+
+.dropdown-item{
+  vertical-align: middle;
 }

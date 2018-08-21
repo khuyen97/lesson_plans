@@ -2,6 +2,13 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.4.2'
+
+gem 'devise'
+gem "omniauth"
+gem "omniauth-google-oauth2"
+gem "omniauth-facebook"
+gem "figaro"
+
 gem 'rails-i18n'
 gem 'mini_magick'
 gem 'carrierwave'

@@ -18,3 +18,8 @@ subjects.map do |subject|
     Subject.create!(name: subject)
 end
  
+User.create!(email: "admin@gmail.com",
+    password: "password",
+    password_confirmation: "password",
+    admin: true)
+    

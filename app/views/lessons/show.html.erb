@@ -1,5 +1,5 @@
+<% provide(:title, "Show lesson") %>
 <div class="container">
-  <br/>   
   <div class="row">
     <div class="col-md-9">
       <div class="lesson-details bg-white border border-info">
@@ -43,7 +43,7 @@
             <%= @lesson.title_unit %>
           </div>
         </div>
-        <%= link_to 'Edit', edit_lesson_path, class: "lesson-edit" %> |
+        <%= link_to 'Edit', edit_lesson_path, class: "lesson-edit", "data-turbolinks" => false %> |
         <%= link_to "Delete", lesson_path, method: :delete, data: { confirm: "Are you sure?" }, remote: true, class: "lesson-delete" %>
       </div>
     </div>

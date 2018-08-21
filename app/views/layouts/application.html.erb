@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Lesson Plans</title>
+    <%= favicon_link_tag asset_path('logotitle.png'), :rel => 'icon', :type => 'image/png' %>
+    <title><%= yield(:title) %> | Lesson Plans</title>
     <link rel="apple-touch-icon" sizes="57x57" href="./assets/images/logo.png">
       <%= render "layouts/rails_default" %>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
@@ -9,9 +10,13 @@
 
   <body>
     <%= render "layouts/header" %>
-    <div class="container-fluid">
-      <% flash.each do |message_type, message| %>
-        <div class="alert alert-<%= message_type %>"><%= message %></div>
+    <div>
+      <br>
+      <% if notice %>
+        <p class="alert alert-success"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+        <p class="alert alert-danger"><%= alert %></p>
       <% end %>
       <%= yield %>
       <%= render 'layouts/footer' %>

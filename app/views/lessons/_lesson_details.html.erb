@@ -2,12 +2,12 @@
   <div >
     <div>
       <h5>Kiểm tra bài cũ</h5>
-      <span class="text-muted">
+      <i class="text-muted">
         (<%= @lesson.last_lesson_time %> phút)
-      </span>
+      </i>
     </div>
     <div>
-      <p><%= raw(@lesson.last_lesson_content)%></p>
+      <p><%= raw @lesson.last_lesson_content %></p>
     </div>    
   </div>
 
@@ -16,78 +16,85 @@
       <h5>Mục tiêu bài mới</h5>
     </div>
     <div>
-      <p><%= raw(@lesson.object)%></p>
+      <p><%= raw @lesson.object %></p>
     </div>    
   </div>
 
   <div>
     <div>
       <h5>Giới thiệu bài mới</h5>
-      <span class="text-muted">
+      <i class="text-muted">
         (<%= @lesson.intro_time %> phút)
-      </span>
+      </i>
     </div>
     <div>
-      <p><%= raw(@lesson.intro_content) %></p>
+      <p><%= raw @lesson.intro_content %></p>
     </div>    
   </div>
 
   <div>
     <div>
       <h5>Giảng bài</h5>
-      <span class="text-muted">
+      <i class="text-muted">
         (<%= @lesson.instruction_time %> phút)
-      </span>
+      </i>
     </div>
     <div>
-      <p><%= raw(@lesson.instruction_content) %></p>
+      <p><%= raw @lesson.instruction_content %></p>
     </div>    
   </div>
 
   <div>
     <div>
       <h5>Tương tác/ Thực hành có hướng dẫn</h5>
-      <span class="text-muted">
+      <i class="text-muted">
         (<%= @lesson.practice_time %> phút)
-      </span>
+      </i>
     </div>
     <div>
-      <p><%= raw(@lesson.practice_content) %></p>
+      <p><%= raw @lesson.practice_content %></p>
     </div>    
   </div>
 
   <div>
     <div>
-      <h5>Tương tác/ Thực hành có hướng dẫn</h5>
-      <span class="text-muted">
+      <h5>Học sinh làm việc độc lập</h5>
+      <i class="text-muted">
         (<%= @lesson.working_time %> phút)
-      </span>
+      </i>
     </div>
     <div>
-      <p><%= raw(@lesson.working_content) %></p>
+      <p><%= raw @lesson.working_content %></p>
     </div>    
   </div>
 
   <div>
     <div>
       <h5>Nâng cao/ Củng cố</h5>
+      <i class="text-muted">
+        (<%= @lesson.diff_time %> phút)
+      </i>
     </div>
     <div>
-      <p>Nâng cao (với học sinh khá): <%= raw(@lesson.diff_support) %></p>
-      <p>Củng cố (với học sinh yếu): <%= raw(@lesson.diff_enrich) %></p>
+      <b>+ Nâng cao (với học sinh khá):</b> 
+        <p><%= raw @lesson.diff_support %></p>
+      <b>+ Củng cố (với học sinh yếu):</b>
+        <p><%= raw @lesson.diff_enrich %></p>
     </div>    
   </div>
 
   <div>
     <div>
       <h5>Đánh giá/ Tổng kết</h5>
-      <span class="text-muted">
+      <i class="text-muted">
         (<%= @lesson.review_time %> phút)
-      </span>
+      </i>
     </div>
     <div>
-      <p>Đánh giá: <%= raw(@lesson.assess_content) %></p>
-      <p>Tổng kết: <%= raw(@lesson.review_content) %></p>
+      <b>+ Đánh giá:</b>
+        <p><%= raw @lesson.assess_content %></p>
+      <b>+ Tổng kết:</b>
+        <p><%= raw @lesson.review_content %></p>
     </div>    
   </div>
 </div>
