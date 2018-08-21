@@ -1,0 +1,11 @@
+<% @subjects.each do |subject| %>
+  <% if params[:subject_id] == subject.id.to_s %>
+    <li>
+      <%= check_box_tag "subject_id", subject.id, true %> <span><%= subject.name %></span>
+    </li>
+  <% else %>
+    <li>
+        <%= check_box_tag "subject_id", subject.id %> <span><%= subject.name %></span>
+    </li>
+  <% end %>
+<% end %>

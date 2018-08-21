@@ -1,0 +1,11 @@
+<% @grades.each do |grade| %>
+  <% if params[:grade_id] == grade.id.to_s %>
+    <li>
+      <%= check_box_tag "grade_id", grade.id, true %> <span><%= grade.name %></span>
+    </li>
+  <% else %>
+    <li>
+      <%= check_box_tag "grade_id", grade.id %> <span><%= grade.name %></span>
+    </li>
+  <% end %>
+<% end %>

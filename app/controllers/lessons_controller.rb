@@ -20,11 +20,13 @@ class LessonsController < ApplicationController
   def new
     @lesson = Lesson.new
     @grades = Grade.all
-    @subject = Subject.all
+    @subjects = Subject.all
   end
 
   # GET /lessons/1/edit
   def edit
+    @grades = Grade.all
+    @subjects = Subject.all
   end
 
   # POST /lessons
@@ -76,8 +78,8 @@ class LessonsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def lesson_params
       params.require(:lesson).permit(:grade_id, :subject_id, :title_lesson, :title_unit, :title_content,
-      :last_lesson_time, :last_lesson_content, :object, :intro_time, :intro_content, :practice_time,
-      :practice_content, :working_time, :working_content, :diff_support, :diff_enrich, :assess_time,
-      :assess_content, :review_time, :review_content)
+      :last_lesson_time, :last_lesson_content, :object, :intro_time, :intro_content, :instruction_time,
+      :instruction_content, :practice_time, :practice_content, :working_time, :working_content, :diff_time,
+      :diff_support, :diff_enrich, :review_time, :assess_content, :review_content)
     end
 end

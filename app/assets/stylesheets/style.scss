@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import "font-awesome";
 
 .navbar {
   background-color: #42b587;
@@ -16,7 +17,19 @@
   color: white;
 }
 
+.navbar .navbar-brand span {
+  vertical-align: middle;
+}
+
 .navbar .navbar-brand:hover {
+  color: white;
+}
+
+.nav-link {
+  color: white;
+}
+
+.dropdown .dropdown-toggle {
   color: white;
 }
 
@@ -49,27 +62,20 @@
 
 //body
 body {
-  background: #f2f2f2;
-  font-family: ProximaNova, Arial, sans-serif;
+  background: #f8f9fa;
+  font-size: 15px;
 }
-
-.row {
-   margin: 0;
- }
 
 .card {
-  border: 1px solid #ccc;
   display: flex;
+  border-color: #854555;
+  box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.4);
+  height: 100%;
 }
+
 .card-header {
-  //background-color: #42b587;
-  //color: white
-}
-.card-header > a {
-  //color: white;
-}
-.card-header > a:hover {
-  //color: white;
+  text-align: center;
+  background: #854555;
 }
 
 .card-body > li {
@@ -77,43 +83,113 @@ body {
   display: block;
   color: #222;
   font-size: 14px;
-  border: 1px solid #ccc;
+  border: 1px solid #17a2b8;
   border-width: 0 0 1px 0;
 }
 
 .card-link {
-  color: #666;
+  font-size: 24px;
+  color: white;
+  display:block;
+  padding: 20px;
+  &:hover {
+    color: white;
+    background-color: #703745;
+  }
 }
 
-.card-link:hover {
-  color: #666;
+.filter-list .card-header {
+  padding: 0;
+}
+
+form .filter-list {
+  width: 100%;
+}
+
+ul{
+  padding: 0;
+  margin: 0;
 }
 
 li {
-  list-style: none
+  list-style: none;
+  margin: 2px;
 }
 
-li.title {
+li .title {
   font-size: 25px;
-  font-family: ProximaNova-Light, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
-  color: #666;
-  border: 1px solid #ccc;
-  border-width: 1px 0;
-  padding: 5px 0;
-  margin-bottom: 6px;
+  padding: 0;
 }
 
-.filter-button {
-  margin-left: 40px;
+.btn {
+  box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.4);
 }
 
-.lesson-group {
-  margin-right: 20px;
+.btn.btn-orange {
+  background-color: #f7931d;
+  color: #fff;
+  &:hover:not(.disabled) {
+    background-color: #d97908;
+  }
+}
+
+.lesson-card {
+  margin-bottom: 24px;
 }
 
 .lesson-link:hover {
   text-decoration: none;
 }
 
+.lesson-title > a, .lesson-delete, .lesson-edit {
+  color: #17a2b8;
+  &:hover {
+    color: #17a2b8;
+  }
+}
+
+h6 {
+  font-weight: bold;
+}
+
+.type-lesson-plan {
+  color: #854555;
+  font-size: 32px;
+  padding-top: 10px;
+  vertical-align: middle;
+}
+
+.title-content {
+  font-size: 32px;
+  vertical-align: middle;
+}
+
+.lesson-details {
+  padding: 15px;
+  border-radius: 5px
+}
+
+h5 {
+  display: inline;
+}
+
+.lesson-title {
+  padding: 10px;
+}
+
+.lesson-time {
+}
+
+.text-justify p{
+  padding-left: 15px;
+}
+
+.col-md-9{
+  padding-block-end: 10px;
+}
+
+.dropdown-item{
+  vertical-align: middle;
+}

@@ -1,13 +1,26 @@
-
-<div class="card border-success mb-3">    
-  <div class="card-header">
-    <%= lesson.subject.name + " - " + lesson.grade.name %>
-  </div>
-  <div class="card-body text-dark">
-    <h5 class="card-title"><%= link_to lesson.title_content, lesson %></h5>
-    <p class="card-text"><%= lesson.intro_content %></p>
-  </div>
-  <div class="card-footer">
-    <small class="text-muted">Last updated 3 mins ago</small>
+<div class="col-md-4 lesson-card">
+  <div class="card">    
+    <div class="card-header text-white">
+      <%= lesson.subject.name + " - " + lesson.grade.name%>
+    </div>
+    <div class="card-body text-dark">
+      <h5 class="card-title">
+        <span class="lesson-title">
+          <%= link_to lesson.title_content.truncate(50), lesson, class: "lesson-link" %>
+        </span>
+      </h5>
+      <p class="card-text"><%= raw(lesson.intro_content.truncate(120)) %></p>
+    </div>
+    <div class="card-footer bg-transparent">
+      <div class="row">
+        <div class="col-md-8">
+          <small class="text-muted"><%= time_ago_in_words(lesson.created_at) %> trước.</small>
+        </div>
+        <div class="col-md-4">
+          <span><%= link_to "", edit_lesson_path(lesson), class: "lesson-edit far fa-edit", "data-turbolinks" => false %></span>&nbsp;
+          <span><%= link_to "", lesson_path(lesson), method: :delete, data: { confirm: "Are you sure?" }, remote: true, class: "lesson-delete far fa-trash-alt" %></span>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
