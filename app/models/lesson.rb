@@ -1,4 +1,5 @@
 class Lesson < ApplicationRecord
+  enum status: [:Nháp, :Xong]
   belongs_to :grade
   belongs_to :subject
   default_scope -> { order(created_at: :desc) }

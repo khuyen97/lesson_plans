@@ -10,16 +10,16 @@
 
   <body>
     <%= render "layouts/header" %>
-    <div>
+    <div class="container-fluid">
       <br>
       <% if notice %>
         <p class="alert alert-success"><%= notice %></p>
       <% end %>
       <% if alert %>
         <p class="alert alert-danger"><%= alert %></p>
-      <% end %>
+      <% end %>      
       <%= yield %>
-      <%= render 'layouts/footer' %>
     </div>
+    <%= render 'layouts/footer' %>    
   </body>
 </html>
