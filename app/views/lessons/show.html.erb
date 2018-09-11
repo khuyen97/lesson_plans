@@ -1,6 +1,5 @@
-<% provide(:title, "Show lesson") %>
+<% provide(:title, "Xem bài học") %>
 <div class="container">
-  <!-- <br/>    -->
   <div class="row">
     <div class="col-md-9">
       <div class="lesson-details bg-white border border-info">
@@ -44,8 +43,8 @@
             <%= @lesson.title_unit %>
           </div>
         </div>
-        <%= link_to 'Edit', edit_lesson_path, class: "lesson-edit", "data-turbolinks" => false %> |
-        <%= link_to "Delete", lesson_path, method: :delete, data: { confirm: "Are you sure?" }, remote: true, class: "lesson-delete" %>
+        <%= link_to 'Sửa', edit_lesson_path, class: "lesson-edit", "data-turbolinks" => false %> |
+        <%= link_to "Xóa", lesson_path, method: :delete, data: { confirm: "Bạn có chắc không?" }, remote: true, class: "lesson-delete" %>
       </div>
     </div>
   </div>

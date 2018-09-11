@@ -1,16 +1,16 @@
-<% provide(:title, "My Account") %>
+<% provide(:title, "Tài khoản của tôi") %>
 <div class="row">
   <div class="col-md-3"></div>
   
   <div class="col-md-6">
     <!-- <h2>Edit <%= resource_name.to_s.humanize %></h2> -->
-    <h2>My Account</h2>
+    <h2>Chỉnh sửa tài khoản</h2>
 
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
       <%= devise_error_messages! %>
     
       <div class="form-group">
-        <%= f.label :email_address %><br />
+        <%= f.label :Địa_chỉ_email %><br />
         <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control form-control-sm" %>
       </div>
     
@@ -19,34 +19,34 @@
       <% end %>
     
       <div class="form-group">
-        <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+        <%= f.label :Mật_khẩu %> <i>(để trống nếu bạn không muốn thay đổi)</i><br />
         <%= f.password_field :password, autocomplete: "off", class: "form-control form-control-sm" %>
         <% if @minimum_password_length %>
           <br />
-          <em><%= @minimum_password_length %> characters minimum</em>
+          <em>Tối thiểu <%= @minimum_password_length %> ký tự</em>
         <% end %>
       </div>
     
       <div class="form-group">
-        <%= f.label :password_confirmation %><br />
+        <%= f.label :Xác_nhận_mật_khẩu %><br />
         <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control form-control-sm" %>
       </div>
     
       <div class="form-group">
-        <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+        <%= f.label :Mật_khẩu_hiện_tại %> <i>(chúng tôi cần mật khẩu hiện tại của bạn để xác nhận thay đổi của bạn)</i><br />
         <%= f.password_field :current_password, autocomplete: "off", class: "form-control form-control-sm" %>
       </div>
     
       <div class="actions">
-        <%= f.submit "Update", class: "btn btn-primary", style: "width: 100%" %>
+        <%= f.submit "Cập nhật", class: "btn btn-primary", style: "width: 100%" %>
       </div>
     <% end %>
     
-    <h3>Cancel my account</h3>
+    <h3>Hủy tài khoản của tôi</h3>
     
-    <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+    <p>Không vui? <%= button_to "Hủy tài khoản của tôi", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
     
-    <%= link_to "Back", :back %>      
+    <%= link_to "Trở lại", :back %>      
   </div>
 
   <div class="col-md-3"></div>

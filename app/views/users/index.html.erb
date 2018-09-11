@@ -1,6 +1,5 @@
-<!-- <p id="notice"><%= notice %></p> -->
-<% provide(:title, "Users") %>
-<h1>Users</h1>
+<% provide(:title, "Người dùng") %>
+<h1>Tất cả người dùng</h1>
 
 <table>
   <thead>
@@ -19,11 +18,11 @@
         <td><%= user.id %></td>
         <td><%= user.email %></td>
         <td> </td>
-        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Chi tiết', user %></td>
         <td> </td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Chỉnh sửa', edit_user_path(user) %></td>
         <td> </td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Hủy', user, method: :delete, data: { confirm: 'Bạn có chắc không?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -31,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New User', new_user_path %>
+<%= link_to 'Tạo người dùng mới', new_user_path %>
