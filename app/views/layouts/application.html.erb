@@ -3,7 +3,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <head>
     <%= favicon_link_tag asset_path('logotitle.png'), :rel => 'icon', :type => 'image/png' %>
-    <title><%= yield(:title) %> | Lesson Plans</title>
+    <title><%= yield(:title) %> | <%= t(".lesson") %></title>
     <link rel="apple-touch-icon" sizes="57x57" href="./assets/images/logo.png">
       <%= render "layouts/rails_default" %>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
@@ -11,16 +11,16 @@
 
   <body>
     <%= render "layouts/header" %>
-    <div>
+    <div class="container-fluid">
       <br>
       <% if notice %>
         <p class="alert alert-success"><%= notice %></p>
       <% end %>
       <% if alert %>
         <p class="alert alert-danger"><%= alert %></p>
-      <% end %>
+      <% end %>      
       <%= yield %>
-      <%= render 'layouts/footer' %>
     </div>
+    <%= render 'layouts/footer' %>    
   </body>
 </html>

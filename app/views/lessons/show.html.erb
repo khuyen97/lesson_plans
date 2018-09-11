@@ -1,4 +1,4 @@
-<% provide(:title, "Show lesson") %>
+<% provide(:title, t(".show_lesson")) %>
 <div class="container">
   <div class="row">
     <div class="col-md-9">
@@ -12,7 +12,7 @@
           <div style="line-height: 2.5em">
             <span>
               <%= image_tag("lesson.png", :alt => "lesson-plan-icon", style: "height: 2.5em") %>
-              <span class="type-lesson-plan">Giáo Án:  </span>
+              <span class="type-lesson-plan"><%= t ".lesson" %> </span>
               <span class="title-content"><%= @lesson.title_content %></span>
             </span>    
           </div>
@@ -22,29 +22,29 @@
     </div>
     <div class="col-md-3">
       <div class="lesson-details bg-white border border-info">
-        <div class="filter-button"><%= submit_tag "Tải giáo án",
+        <div class="filter-button"><%= submit_tag t(".download"),
           class: "btn btn-orange", style: "width: 100%" %>
         </div><br/>
         <p>
-          <strong>Khối: </strong>
+          <strong><%= t ".grade" %></strong>
           <%= @lesson.grade.name %>
         </p>
         <p>
-          <strong>Môn học: </strong>
+          <strong><%= t ".subject" %></strong>
           <%= @lesson.subject.name %>
         </p>
         <div class="row">
           <div class="col-md">
-            <strong>Bài: </strong>
+            <strong><%= t ".title_lesson" %></strong>
             <%= @lesson.title_lesson %>
           </div>
           <div class="col-md">
-            <strong> Tiết: </strong>
+            <strong><%= t ".title_unit" %></strong>
             <%= @lesson.title_unit %>
           </div>
         </div>
-        <%= link_to 'Edit', edit_lesson_path, class: "lesson-edit", "data-turbolinks" => false %> |
-        <%= link_to "Delete", lesson_path, method: :delete, data: { confirm: "Are you sure?" }, remote: true, class: "lesson-delete" %>
+        <%= link_to t(".edit"), edit_lesson_path, class: "lesson-edit", "data-turbolinks" => false %> |
+        <%= link_to t(".delete"), lesson_path, method: :delete, data: { confirm: t(".confirm") }, remote: true, class: "lesson-delete" %>
       </div>
     </div>
   </div>
