@@ -7,7 +7,7 @@ class LessonsController < ApplicationController
   def index
     @grades = Grade.all
     @subjects = Subject.all
-    @lessons = Lesson.where(nil)
+    @lessons = Lesson.publish
     @lessons = @lessons.grade_id(params[:grade_id]) if params[:grade_id].present?
     @lessons = @lessons.subject_id(params[:subject_id]) if params[:subject_id].present?
   end
@@ -80,6 +80,6 @@ class LessonsController < ApplicationController
       params.require(:lesson).permit(:grade_id, :subject_id, :title_lesson, :title_unit, :title_content,
       :last_lesson_time, :last_lesson_content, :object, :intro_time, :intro_content, :instruction_time,
       :instruction_content, :practice_time, :practice_content, :working_time, :working_content, :diff_time,
-      :diff_support, :diff_enrich, :review_time, :assess_content, :review_content)
+      :diff_support, :diff_enrich, :review_time, :assess_content, :review_content, :status, :user_id)
     end
 end

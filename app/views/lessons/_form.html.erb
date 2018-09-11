@@ -1,7 +1,7 @@
 <%= form_with(model: @lesson, local: true) do |form| %>
   <% if @lesson.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(lesson.errors.count, "error") %> prohibited this lesson from being saved:</h2>
+      <h2><%= pluralize(@lesson.errors.count, "error") %> prohibited this lesson from being saved:</h2>
       <ul>
       <% @lesson.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -12,160 +12,169 @@
 
   <div class="row">
     <div class="form-group col-md">
-        <%= form.label "Khối:", class: "col-form-label" %>
+        <%= form.label :grade, t(".grade"), class: "col-form-label" %>
         <%= form.collection_select :grade_id, @grades, :id, :name, {}, class: "form-control form-control-sm custom-select" %>
     </div>
     <div class="form-group col-md">
-      <%= form.label "Môn học:", class: "col-form-label" %>
+      <%= form.label :subject, t(".subject"), class: "col-form-label" %>
       <%= form.collection_select :subject_id, @subjects, :id, :name, {}, class: " form-control form-control-sm custom-select" %>
     </div>
     <div class="form-group col-md">
-      <%= form.label "Bài:", class: "col-form-label" %>
+      <%= form.label :title_lesson, t(".title_lesson"), class: "col-form-label" %>
       <%= form.number_field :title_lesson, min: 1, class: "form-control form-control-sm" %>
     </div>
     <div class="form-group col-md">
-      <%= form.label "Tiết:", class: "col-form-label" %>
+      <%= form.label :title_unit, t(".title_unit"), class: "col-form-label" %>
       <%= form.number_field :title_unit, min: 1, class: "form-control form-control-sm" %>
     </div>
   </div>
 
   <div class="row">
     <div class="form-group col-md">
-      <%= form.label "Tên bài:", class: "col-form-label" %>
+      <%= form.label :title_content, t(".title_content"), class: "col-form-label" %>
       <%= form.text_field :title_content, class: "form-control form-control-sm" %>
     </div>
   </div>
   
   <div class="row">
     <div class="form-group col-md-2">
-      <h6 style="">Kiểm tra bài cũ:</h6>
-      <%= form.label "Thời gian (phút):", class: "col-form-label"%>
+      <h6 style=""><%= t ".last_lesson" %></h6>
+      <%= form.label :last_lesson_time, t(".time"), class: "col-form-label"%>
       <%= form.number_field :last_lesson_time, min: 1, class: "form-control form-control-sm" %>
     </div>
   </div>
   <div class="row">
     <div class="form-group col-md">
-      <%= form.label "Nội dung:", class: "col-form-label" %>
+      <%= form.label :last_lesson_content, t(".content"), class: "col-form-label" %>
       <%= form.text_area :last_lesson_content, class: "ckeditor" %>
     </div>
   </div>
   
   <div class="row">
     <div class="form-group col-md">
-      <h6><%= form.label "Mục tiêu bài mới:", class: "col-form-label" %></h6>
+      <h6><%= form.label :object, t(".object"), class: "col-form-label" %></h6>
       <%= form.text_area :object, class: "ckeditor" %>
     </div>
   </div>
 
   <div class="row">
-    <h6 class="col-md">Giới thiệu bài mới</h6>
+    <h6 class="col-md"><%= t ".intro" %></h6>
   </div>
 
   <div class="row">
     <div class="form-group col-md-2">
-      <%= form.label "Thời gian (phút):" %>
+      <%= form.label :intro_time, t(".time"), class: "col-form-label" %>
       <%= form.number_field :intro_time, min: 1, class: "form-control form-control-sm" %>
     </div> 
   </div>
   <div class="row">
     <div class="form-group col-md">
-      <%= form.label "Nội dung:" %>
+      <%= form.label :intro_content, t(".content"), class: "col-form-label" %>
       <%= form.text_area :intro_content, class: "ckeditor" %>
     </div>
   </div>
   
   <div class="row">
-    <h6 class="col-md">Giảng bài</h6>
+    <h6 class="col-md"><%= t ".instruction" %></h6>
   </div>
   <div class="row">
     <div class="form-group col-md-2">
-      <%= form.label "Thời gian (phút):" %>
+      <%= form.label :instruction_time, t(".time"), class: "col-form-label" %>
       <%= form.number_field :instruction_time, min: 1, class: "form-control form-control-sm" %>
     </div>
   </div>
   <div class="row">
     <div class="form-group col-md">
-      <%= form.label "Nội dung:" %>
-      <%= form.text_area :instruction_content, class: "ckeditor" %>
+      <%= form.label :istruction_content, t(".content"), class: "col-form-label" %>
+      <%= form.text_area :istruction_content, class: "ckeditor" %>
     </div>
   </div>
 
   <div class="row">
-    <h6 class="col-md">Tương tác/ Thực hành có hướng dẫn</h6>
+    <h6 class="col-md"><%= t ".practice" %></h6>
   </div>
   <div class="row">
     <div class="form-group col-md-2">
-      <%= form.label "Thời gian (phút):" %>
+      <%= form.label :practice_time, t(".time"), class: "col-form-label" %>
       <%= form.number_field :practice_time, min: 1, class: "form-control form-control-sm" %>
     </div>
   </div>
 
   <div class="row">
     <div class="form-group col-md">
-      <%= form.label "Nội dung:" %>
+      <%= form.label :practice_content, t(".content"), class: "col-form-label"  %>
       <%= form.text_area :practice_content, class: "ckeditor" %>
     </div>
   </div>
 
   <div class="row">
-    <h6 class="col-md">Học sinh làm việc độc lập</h6>
+    <h6 class="col-md"><%= t ".working" %></h6>
   </div>
   <div class="row">
     <div class="form-group col-md-2">
-      <%= form.label "Thời gian (phút):" %>
+      <%= form.label :working_time, t(".time"), class: "col-form-label" %>
       <%= form.number_field :working_time, min: 1, class: "form-control form-control-sm" %>
     </div>
   </div>
   <div class="row">
     <div class="form-group col-md">
-      <%= form.label "Nội dung:" %>
+      <%= form.label :working_content, t(".content"), class: "col-form-label" %>
       <%= form.text_area :working_content, class: "ckeditor" %>
     </div>  
   </div>
 
   <div class="row">
-    <h6 class="col-md">Nâng cao/ Củng cố</h6>
+    <h6 class="col-md"><%= t ".diff" %></h6>
   </div>
   <div class="row">
     <div class="form-group col-md-2">
-      <%= form.label "Thời gian (phút):" %>
+      <%= form.label :diff_time, t(".time"), class: "col-form-label" %>
       <%= form.number_field :diff_time, min: 1, class: "form-control form-control-sm" %>
     </div> 
   </div>  
   <div class="row">
     <div class="form-group col-md">
-      <%= form.label "Nâng cao (với học sinh khá):" %>
+      <%= form.label :diff_support, t(".diff_support") %>
       <%= form.text_area :diff_support, class: "ckeditor" %>
     </div>
     <div class="form-group col-md">
-      <%= form.label "Củng cố (với học sinh yếu):" %>
+      <%= form.label :diff_enrich, t(".diff_enrich") %>
       <%= form.text_area :diff_enrich, class: "ckeditor" %>
     </div>
   </div>
 
   <div class="row">
-    <h6 class="col-md">Đánh giá/ Tổng kết</h6>
+    <h6 class="col-md"><%= t ".review_access" %></h6>
   </div>
   <div class="row">
     <div class="form-group col-md-2">
-      <%= form.label "Thời gian (phút):" %>
+      <%= form.label :review_time, t(".time") %>
       <%= form.number_field :review_time, min: 1, class: "form-control form-control-sm" %>
     </div> 
-  </div>  
+  </div>
   <div class="row">
     <div class="form-group col-md">
-      <%= form.label "Đánh giá:" %>
+      <%= form.label :assess_content, t(".assess") %>
       <%= form.text_area :assess_content, class: "ckeditor" %>
     </div>
     <div class="form-group col-md">
-      <%= form.label "Tổng kết:" %>
+      <%= form.label :review_content, t(".review") %>
       <%= form.text_area :review_content, class: "ckeditor" %>
     </div>
   </div>
 
   <div class="row">
+    <div class="form-group col-md">
+      <%= form.label :status,  t(".status"), class: "col-form-label" %>
+      <%= form.select :status, options_for_select(Lesson.statuses.keys), {}, class: "form-control form-control-sm custom-select" %>
+    </div>
+  </div>
+  
+  <%= form.hidden_field :user_id, value: current_user.id %>
+
+  <div class="row">
     <div class="form-group col-md-2">
-      <%= form.submit "Create", class: "btn btn-orange", style: "width: 100%" %>
+      <%= form.submit t(".save"), class: "btn btn-orange", style: "width: 100%" %>
     </div>
   </div>
   <br/> 
