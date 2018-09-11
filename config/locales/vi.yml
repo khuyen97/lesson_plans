@@ -1,0 +1,51 @@
+vi:
+  lessons:
+    index: 
+    new:
+    form:
+      grade: "Khối: "
+      subject: "Môn học:"
+      title_lesson: "Bài:"
+      title_unit: "Tiết:"
+      title_content: "Tên bài:"
+      time: "Thời gian (phút):"
+      content: "Nội dung:"
+      object: "Mục tiêu bài mới:"
+      last_lesson: "Kiểm tra bài cũ:"
+      intro: "Giới thiệu bài mới:"
+      instruction: "Giảng bài:"
+      practice: "Tương tác/ Thực hành có hướng dẫn"
+      working: "Học sinh làm việc độc lập"
+      diff: "Nâng cao/ Củng cố"
+      diff_support: "Nâng cao (với học sinh khá):"
+      diff_enrich: "Củng cố (với học sinh yếu):"
+      review_access: "Đánh giá/ Tổng kết"
+      assess: "Đánh giá:"
+      review: "Tổng kết"
+      status: "Trạng thái:"
+      save: "Lưu"
+    filter:
+      by_grade: "Theo khối"
+      by_subject: "Theo môn học"
+      filter: "Lọc"
+    lesson:
+      ago: " trước."
+    show:
+      lesson: "Giáo án"
+      download: "Tải giáo án"
+      grade: "Khối: "
+      subject: "Môn học:"
+      title_lesson: "Bài:"
+      title_unit: "Tiết:"
+    new:
+      new_lesson: "Tạo giáo án mới"
+  layouts:
+    header:
+      lesson: "Giáo án"
+      new_lesson: "Tạo giáo án mới"
+      log_in: "Đăng nhập"
+      log_out: "Đăng xuất"
+      my_account: "Tài khoản của tôi"
+      
+    application:
+      lesson: "Giáo án"

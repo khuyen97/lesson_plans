@@ -2,13 +2,13 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <span>
       <a class="navbar-brand" href="<%= lessons_path %>">
-        <%= image_tag("logo.png", :alt => "logo") %><span class="nav-text">Lessonplans</span>
+        <%= image_tag("logo.png", :alt => "logo") %><span class="nav-text"><%= t ".lesson" %></span>
       </a>
       </span>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <%= link_to 'New Lesson', new_lesson_path, class: "nav-link", "data-turbolinks" => false %>          
+          <%= link_to t(".new_lesson"), new_lesson_path, class: "nav-link", "data-turbolinks" => false %>          
         </li>
       </ul>
 
@@ -18,7 +18,7 @@
       <% else %>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            Basic <b class="caret"></b>
+            My account <b class="caret"></b>
           </a>
           <ul class="dropdown-menu dropdown-menu-right">
             <% if !current_user.admin? %>

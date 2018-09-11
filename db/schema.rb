@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_07_164247) do
+ActiveRecord::Schema.define(version: 2018_09_07_050112) do
 
   create_table "ckeditor_assets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "data_file_name", null: false
@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(version: 2018_08_07_164247) do
     t.bigint "subject_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "status", default: 1
     t.index ["grade_id", "subject_id", "created_at"], name: "index_lessons_on_grade_id_and_subject_id_and_created_at"
     t.index ["grade_id"], name: "index_lessons_on_grade_id"
     t.index ["subject_id"], name: "index_lessons_on_subject_id"

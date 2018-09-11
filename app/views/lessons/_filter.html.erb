@@ -5,7 +5,7 @@
         <div class="card-header text-white">        
           <li class="title">
             <a class="card-link" data-toggle="collapse" href="#collapseOne">
-            Theo khối
+              <%= t ".by_grade" %>
             </a>
           </li>
         </div>
@@ -21,7 +21,7 @@
         <div class="card-header text-white">        
           <li class="title">
             <a class="card-link" data-toggle="collapse" href="#collapseTwo">
-              Theo môn học
+              <%= t ".by_subject" %>
             </a>
           </li>
         </div>
@@ -32,7 +32,7 @@
         </div>
       </div>
     </ul>
-    <div class="filter-button"><%= submit_tag "Lọc", class: "btn btn-orange", style: "width: 100%" %></div>
+    <div class="filter-button"><%= submit_tag t(".filter"), class: "btn btn-orange", style: "width: 100%" %></div>
   </div>
   <br/>
 <% end %>
