@@ -13,27 +13,27 @@
       </ul>
 
       <% if !user_signed_in? %>
-        <%= link_to 'Đăng nhập', new_user_session_path, class: "nav-link" %>
-        <%= link_to "Đăng ký", new_user_registration_path, class: "nav-link" %>
+        <%= link_to 'Log In', new_user_session_path, class: "nav-link" %>
+        <%= link_to "Sign Up", new_user_registration_path, class: "nav-link" %>
       <% else %>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            Tài khoản của tôi <b class="caret"></b>
+            Basic <b class="caret"></b>
           </a>
           <ul class="dropdown-menu dropdown-menu-right">
             <% if !current_user.admin? %>
-              <li><strong><%= current_user.email %></strong></li>
+              <li class="fas fa-user-circle"><strong><%= current_user.email %></strong></li>
               <li class="dropdown-divider"></li>
-              <li><%= link_to "Chỉnh sửa tài khoản", edit_user_registration_path, class: "dropdown-item" %></li>
+              <li><%= link_to "My Account", edit_user_registration_path, class: "dropdown-item" %></li>
               <li class="dropdown-divider"></li>
-              <li><%= link_to "Đăng xuất", destroy_user_session_path, method: :delete, class: "dropdown-item" %></li>
+              <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "dropdown-item" %></li>
             <% elsif current_user.admin? %>
-              <li><strong><%= current_user.email %></strong></li>
+              <li class="fas fa-user-circle"><strong><%= current_user.email %></strong></li>
               <li class="dropdown-divider"></li>
-              <li><%= link_to "Chỉnh sửa tài khoản", edit_user_registration_path, class: "dropdown-item" %></li>
-              <li><%= link_to "Người dùng", users_path, class: "dropdown-item" %></li>
+              <li><%= link_to "My Account", edit_user_registration_path, class: "dropdown-item" %></li>
+              <li><%= link_to "Users", users_path, class: "dropdown-item" %></li>
               <li class="dropdown-divider"></li>
-              <li><%= link_to "Đăng xuất", destroy_user_session_path, method: :delete, class: "dropdown-item" %></li>
+              <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "dropdown-item" %></li>
             <% end %>
           </ul>
         </li>

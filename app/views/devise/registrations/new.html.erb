@@ -3,13 +3,13 @@
   <div class="col-md-4"></div>
 
   <div class="col-md-4">
-    <h2>Tạo tài khoản</h2>
+    <h2>Create Account</h2>
 
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= devise_error_messages! %>
     
       <div class="form-group">
-        <%= f.label :Địa_chỉ_email %><br />
+        <%= f.label :email_address %><br />
         <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control form-control-sm" %>
       </div>
     
@@ -27,7 +27,7 @@
       </div>
     
       <div class="actions">
-        <%= f.submit "Tạo tài khoản", class: "btn btn-primary", style: "width: 100%" %>
+        <%= f.submit "Create Account", class: "btn btn-primary", style: "width: 100%" %>
       </div>
     <% end %>
     
