@@ -24,7 +24,7 @@ vi:
     omniauth_callbacks:
       user:
       failure: Không thể đăng nhập qua tài khoản %{kind} vì "%{reason}".
-      success: Đăng nhập thành công bằng tài khoản %{kind}.
+      success: Đăng nhập thành công bằng tài khoản Google.
       passwords:
       no_token: Bạn chỉ có thể truy cập trang này từ email đặt lại mật khẩu. Nếu bạn truy cập từ email đặt lại mật khẩu, xin chắc chắn rằng bạn dùng đường dẫn đầy đủ trong email.
       send_instructions: Bạn sẽ nhận được email hướng dẫn thiết lập lại mật khẩu trong vài phút nữa.

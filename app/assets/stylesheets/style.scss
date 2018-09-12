@@ -27,6 +27,9 @@
 
 .nav-link {
   color: white;
+  &:hover {
+    color: white;
+  }
 }
 
 .dropdown .dropdown-toggle {
@@ -168,7 +171,7 @@ h6 {
 
 .lesson-details {
   padding: 15px;
-  border-radius: 5px
+  border-radius: 5px;
 }
 
 h5 {
@@ -192,4 +195,45 @@ h5 {
 
 .dropdown-item{
   vertical-align: middle;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
+.accent-2 {
+  width: 60px;
+  height: 5px;
+  background-color: #f7931d;
+}
+
+.footer_link {
+  color: #fff;
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.signin_form {
+  background-color: #fff;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.4);
+}
+
+.about-slide {
+  border-bottom: 3px solid #ffc107;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+.p-slide {
+  min-height: 120px;
 }

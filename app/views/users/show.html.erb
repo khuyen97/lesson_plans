@@ -1,3 +1,27 @@
 <% provide(:title, t(".show_user")) %>
-<%= link_to t(".edit"), edit_user_path(@user) %> |
-<%= link_to t(".back"), users_path %>
+<div class="row">
+  <div class="col-md-9">
+    <div class="container">
+    <h4> Giáo án của bạn: </h4>     
+      <div class="lesson-group">
+        <% @lessons.in_groups_of(3) do |group| %>
+          <div class="row">
+            <%= render partial: "lessons/lesson", collection: group.compact, as: :lesson %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="container">
+    <h4> Đang sửa: </h4>
+      <div class="lesson-group">
+        <% @draft_lessons.in_groups_of(1) do |group| %>
+          <div class="row">
+          <%= render partial: "lesson", collection: group.compact, as: :lesson %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

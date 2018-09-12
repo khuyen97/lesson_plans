@@ -1,7 +1,7 @@
 <%= form_with(model: @lesson, local: true) do |form| %>
   <% if @lesson.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(lesson.errors.count, "error") %> prohibited this lesson from being saved:</h2>
+      <h2><%= pluralize(@lesson.errors.count, "error") %> prohibited this lesson from being saved:</h2>
       <ul>
       <% @lesson.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -169,6 +169,8 @@
       <%= form.select :status, options_for_select(Lesson.statuses.keys), {}, class: "form-control form-control-sm custom-select" %>
     </div>
   </div>
+  
+  <%= form.hidden_field :user_id, value: current_user.id %>
 
   <div class="row">
     <div class="form-group col-md-2">

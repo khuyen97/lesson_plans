@@ -97,6 +97,9 @@ vi:
       new_lesson: "Tạo giáo án mới"
     edit:
       edit_lesson: "Chỉnh sửa giáo án"
+  users:
+    lesson:
+      ago: " trước."
   layouts:
     header:
       lesson: "Giáo án"
