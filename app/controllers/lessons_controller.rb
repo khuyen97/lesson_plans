@@ -36,7 +36,7 @@ class LessonsController < ApplicationController
 
     respond_to do |format|
       if @lesson.save
-        format.html { redirect_to @lesson, notice: 'Bài học đã được tạo thành công.' }
+        format.html { redirect_to @lesson, notice: t(".create_lesson") }
         format.json { render :show, status: :created, location: @lesson }
       else
         format.html { render :new }
@@ -50,7 +50,7 @@ class LessonsController < ApplicationController
   def update
     respond_to do |format|
       if @lesson.update(lesson_params)
-        format.html { redirect_to @lesson, notice: 'Bài học đã được cập nhật thành công.' }
+        format.html { redirect_to @lesson, notice: t(".update_lesson") }
         format.json { render :show, status: :ok, location: @lesson }
       else
         format.html { render :edit }
@@ -64,7 +64,7 @@ class LessonsController < ApplicationController
   def destroy
     @lesson.destroy
     respond_to do |format|
-      format.html { redirect_to lessons_url, notice: 'Bài học đã bị hủy thành công.' }
+      format.html { redirect_to lessons_url, notice: t(".delete_lesson") }
       format.json { head :no_content }
     end
   end

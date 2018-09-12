@@ -29,7 +29,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: 'Người dùng đã được tạo thành công.' }
+        format.html { redirect_to @user, notice: t(".create_user") }
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new }
@@ -43,7 +43,7 @@ class UsersController < ApplicationController
   def update
     respond_to do |format|
       if @user.update(user_params)
-        format.html { redirect_to @user, notice: 'Người dùng đã được cập nhật thành công.' }
+        format.html { redirect_to @user, notice: t(".update_user") }
         format.json { render :show, status: :ok, location: @user }
       else
         format.html { render :edit }
@@ -57,7 +57,7 @@ class UsersController < ApplicationController
   def destroy
     @user.destroy
     respond_to do |format|
-      format.html { redirect_to users_url, notice: 'Người dùng đã bị hủy thành công.' }
+      format.html { redirect_to users_url, notice: t(".delete_user") }
       format.json { head :no_content }
     end
   end

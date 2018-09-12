@@ -1,7 +1,7 @@
-<% provide(:title, "Chỉnh sửa người dùng") %>
-<h1>Chỉnh sửa người dùng</h1>
+<% provide(:title, t(".edit_user")) %>
+<h1><%= t(".edit_user") %></h1>
 
 <%= render 'form', user: @user %>
 
-<%= link_to 'Chi tiết', @user %> |
-<%= link_to 'Trở lại', users_path %>
+<%= link_to t(".show"), @user %> |
+<%= link_to t(".back"), users_path %>

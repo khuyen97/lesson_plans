@@ -1,6 +1,6 @@
-<% provide(:title, "Tạo người dùng mới") %>
-<h1>Tạo người dùng mới</h1>
+<% provide(:title, t(".new_user")) %>
+<h1><%= t(".new_user") %></h1>
 
 <%= render 'form', user: @user %>
 
-<%= link_to 'Trở lại', users_path %>
+<%= link_to t(".back"), users_path %>

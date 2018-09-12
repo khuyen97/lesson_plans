@@ -43,6 +43,12 @@ vi:
         receive_confirmation: "Không nhận được hướng dẫn xác nhận?"
         receive_unlock: "Không nhận được hướng dẫn mở khóa?"
   lessons:
+    create: 
+      create_lesson: "Giáo án đã được tạo thành công."
+    update:
+      update_lesson: "Giáo án đã được cập nhật thành công."
+    destroy:
+      delete_lesson: "Giáo án đã bị hủy thành công."
     index: 
       home: "Trang chủ"
     form:
@@ -102,5 +108,29 @@ vi:
       users: "Người dùng"
     application:
       lesson: "Giáo án"
-
-
+  users:
+    create:
+      create_user: "Người dùng đã được tạo thành công."
+    update:
+      update_user: "Người dùng đã được cập nhật thành công."
+    destroy:
+      delete_user: "Người dùng đã bị hủy thành công."
+    edit:
+      edit_user: "Chỉnh sửa người dùng"
+      show: "Chi tiết"
+      back: "Trở lại"
+    index:
+      users: "Tất cả người dùng"
+      show: "Chi tiết"
+      edit: "Chỉnh sửa"
+      destroy: "Hủy"
+      confirm: "Bạn có chắc không?"
+      new_user: "Tạo người dùng mới"
+    new:
+      new_user: "Tạo người dùng mới"
+      back: "Trở lại"
+    show:
+      show_user: "Xem người dùng"
+      edit: "Chỉnh sửa"
+      back: "Trở lại"
+      
