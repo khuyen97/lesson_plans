@@ -160,8 +160,9 @@ h6 {
 .type-lesson-plan {
   color: #854555;
   font-size: 32px;
-  padding-top: 10px;
+  padding-bottom: 20px;
   vertical-align: middle;
+  margin-left: 10px;
 }
 
 .title-content {
@@ -178,6 +179,12 @@ h5 {
   display: inline;
 }
 
+#lesson-title {
+  line-height: 2.5em;
+  // display: flex;
+  // align-items: baseline;
+  margin-top: 5px;
+}
 .lesson-title {
   padding: 10px;
 }

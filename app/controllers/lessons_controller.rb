@@ -65,7 +65,7 @@ class LessonsController < ApplicationController
   def destroy
     @lesson.destroy
     respond_to do |format|
-      format.html { redirect_to lessons_url, notice: t(".delete_lesson") }
+      format.html{redirect_back fallback_location: root_url, notice: t(".delete_lesson")}
       format.json { head :no_content }
     end
   end
