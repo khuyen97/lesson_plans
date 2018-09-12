@@ -11,7 +11,8 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    @lessons = current_user.lessons
+    @user = User.find params[:id]
+    @lessons = @user.lessons
     @publish_lessons = @lessons.publish
     @draft_lessons = @lessons.draft
   end

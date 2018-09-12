@@ -31,7 +31,7 @@ vi:
     lesson:
       ago: " trước."
     show:
-      lesson: "Giáo án"
+      lesson: "Giáo án: "
       download: "Tải giáo án"
       grade: "Khối: "
       subject: "Môn học:"
