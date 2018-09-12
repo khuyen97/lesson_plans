@@ -68,7 +68,11 @@ class UsersController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
-      @user = User.find(params[:id])
+      begin
+        @user = User.find params[:id]
+      rescue
+        puts "User not found"
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
@@ -78,8 +82,12 @@ class UsersController < ApplicationController
     # Confirms an admin user.
     def admin_user
       @user = User.find params[:id]
-      if !current_user.admin? && !current_user.eql?(@user)
-        redirect_to(root_url)
-      end
+        if !current_user.admin? && !current_user.eql?(@user)
+          redirect_to(root_url)
+        end
+      rescue ActiveRecord::RecordNotFound => e
+        render json: {
+          error: e.to_s
+        }, status: :not_found
     end
 end
