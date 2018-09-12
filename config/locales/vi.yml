@@ -1,7 +1,56 @@
 vi:
+  devise:
+    passwords:
+      new:
+        forgot_password: "Quên mật khẩu"
+        email: "Địa chỉ email"
+        send_email: "Gửi cho tôi hướng dẫn đặt lại mật khẩu"
+    registrations:
+      edit:
+        my_account: "Tài khoản của tôi"
+        email: "Địa chỉ email"
+        password: "Mật khẩu"
+        min: "Tối thiểu "
+        characters: " ký tự"
+        password_confirmation: "Xác nhận mật khẩu"
+        current_password: "Mật khẩu hiện tại"
+        update: "Cập nhật"
+        cancel_account: "Hủy tài khoản của tôi"
+        confirm: "Bạn có chắc không?"
+        unhappy: "Không vui?"
+        back: "Trở lại"
+        passcur_note: "chúng tôi cần mật khẩu hiện tại của bạn để xác nhận thay đổi của bạn"
+        pass_note: "để trống nếu bạn không muốn thay đổi"
+      new:
+        create_account: "Tạo tài khoản"
+        email: "Địa chỉ email"
+        password: "Mật khẩu"
+        min: "Tối thiểu "
+        characters: " ký tự"
+        password_confirmation: "Xác nhận mật khẩu"
+        sign_up: "Đăng ký"
+    sessions:
+      new:
+        sign_in: "Đăng nhập"
+        email: "Địa chỉ email"
+        password: "Mật khẩu"
+    shared:
+      links:
+        sign_in: "Đăng nhập"
+        forgot_password: "Quên mật khẩu"
+        create_account: "Tạo tài khoản"
+        sign_in_with: "Đăng nhập với "
+        receive_confirmation: "Không nhận được hướng dẫn xác nhận?"
+        receive_unlock: "Không nhận được hướng dẫn mở khóa?"
   lessons:
+    create: 
+      create_lesson: "Giáo án đã được tạo thành công."
+    update:
+      update_lesson: "Giáo án đã được cập nhật thành công."
+    destroy:
+      delete_lesson: "Giáo án đã bị hủy thành công."
     index: 
-    new:
+      home: "Trang chủ"
     form:
       grade: "Khối: "
       subject: "Môn học:"
@@ -30,15 +79,24 @@ vi:
       filter: "Lọc"
     lesson:
       ago: " trước."
+      edit: "Sửa"
+      delete: "Xóa"
+      confirm: "Bạn có chắc không?"
     show:
-      lesson: "Giáo án"
+      lesson: "Giáo án: "
       download: "Tải giáo án"
       grade: "Khối: "
       subject: "Môn học:"
       title_lesson: "Bài:"
       title_unit: "Tiết:"
+      edit: "Sửa"
+      delete: "Xóa"
+      confirm: "Bạn có chắc không?"
+      show_lesson: "Xem giáo án"
     new:
       new_lesson: "Tạo giáo án mới"
+    edit:
+      edit_lesson: "Chỉnh sửa giáo án"
   users:
     lesson:
       ago: " trước."
@@ -49,6 +107,33 @@ vi:
       log_in: "Đăng nhập"
       log_out: "Đăng xuất"
       my_account: "Tài khoản của tôi"
-
+      sign_up: "Đăng ký"
+      users: "Người dùng"
     application:
       lesson: "Giáo án"
+  users:
+    create:
+      create_user: "Người dùng đã được tạo thành công."
+    update:
+      update_user: "Người dùng đã được cập nhật thành công."
+    destroy:
+      delete_user: "Người dùng đã bị hủy thành công."
+    edit:
+      edit_user: "Chỉnh sửa người dùng"
+      show: "Chi tiết"
+      back: "Trở lại"
+    index:
+      users: "Tất cả người dùng"
+      show: "Chi tiết"
+      edit: "Chỉnh sửa"
+      destroy: "Hủy"
+      confirm: "Bạn có chắc không?"
+      new_user: "Tạo người dùng mới"
+    new:
+      new_user: "Tạo người dùng mới"
+      back: "Trở lại"
+    show:
+      show_user: "Xem người dùng"
+      edit: "Chỉnh sửa"
+      back: "Trở lại"
+      
