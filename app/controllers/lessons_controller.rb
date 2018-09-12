@@ -1,6 +1,7 @@
 class LessonsController < ApplicationController
   include LessonsHelper
   before_action :set_lesson, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
   # GET /lessons
   # GET /lessons.json
