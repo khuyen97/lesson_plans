@@ -73,6 +73,8 @@ vi:
       review: "Tổng kết"
       status: "Trạng thái:"
       save: "Lưu"
+      error: "lỗi"
+      text: " xảy ra khi lưu giáo án."
     filter:
       by_grade: "Theo khối"
       by_subject: "Theo môn học"
@@ -87,12 +89,13 @@ vi:
       download: "Tải giáo án"
       grade: "Khối: "
       subject: "Môn học:"
-      title_lesson: "Bài:"
-      title_unit: "Tiết:"
+      title_lesson: "Bài: "
+      title_unit: "Tiết: "
       edit: "Sửa"
       delete: "Xóa"
       confirm: "Bạn có chắc không?"
       show_lesson: "Xem giáo án"
+      user: "Người tạo: "
     new:
       new_lesson: "Tạo giáo án mới"
     edit:
