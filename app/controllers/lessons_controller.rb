@@ -88,6 +88,8 @@ class LessonsController < ApplicationController
 
     def correct_user
       @lesson = current_user.lessons.find_by(id: params[:id])
-      redirect_to root_url if @lesson.nil?
+      if @lesson.nil? || !current_user.admin?
+        redirect_to root_url 
+      end
     end
 end
