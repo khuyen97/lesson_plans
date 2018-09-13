@@ -4,8 +4,7 @@
       <a class="navbar-brand" href="<%= lessons_path %>">
         <%= image_tag("logo.png", :alt => "logo") %><span class="nav-text"><%= t ".lesson" %></span>
       </a>
-      </span>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    </span>   
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
           <%= link_to t(".new_lesson"), new_lesson_path, class: "nav-link", "data-turbolinks" => false %>          
@@ -36,7 +35,6 @@
             <% end %>
           </ul>
         </li>
-      <% end %>
-    </div>
+      <% end %>  
   </nav>
 </header>
