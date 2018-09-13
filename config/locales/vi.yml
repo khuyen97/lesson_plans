@@ -136,4 +136,9 @@ vi:
       show_user: "Xem người dùng"
       edit: "Chỉnh sửa"
       back: "Trở lại"
+  static_pages:
+    about:
+      about: "Giới thiệu"
+    help:
+      help: "Hướng dẫn sử dụng"
       
