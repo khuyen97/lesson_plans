@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
-  before_action :admin_user
+  before_action :correct_user, only: [:edit, :update]
+  before_action :admin_user, only: :destroy
 
   # GET /users
   # GET /users.json
@@ -70,26 +71,22 @@ class UsersController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
-      begin
-        @user = User.find params[:id]
-      rescue
-        puts "User not found"
-      end
+      @user = User.find params[:id]
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
       params.fetch(:user, {})
     end
+
+    # Confirms the correct user.
+    def correct_user
+      @user = User.find(params[:id])
+      redirect_to(root_url) unless current_user?(@user)
+    end
+
     # Confirms an admin user.
     def admin_user
-      @user = User.find params[:id]
-        if !current_user.admin? && !current_user.eql?(@user)
-          redirect_to(root_url)
-        end
-      rescue ActiveRecord::RecordNotFound => e
-        render json: {
-          error: e.to_s
-        }, status: :not_found
+      redirect_to(root_url) unless current_user.admin?
     end
 end

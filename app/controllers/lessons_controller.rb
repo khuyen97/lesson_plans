@@ -1,7 +1,9 @@
 class LessonsController < ApplicationController
   include LessonsHelper
+  include UsersHelper
   before_action :set_lesson, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  before_action :correct_user, only: [:destroy, :edit, :update]
 
   # GET /lessons
   # GET /lessons.json
@@ -82,5 +84,10 @@ class LessonsController < ApplicationController
       :last_lesson_time, :last_lesson_content, :object, :intro_time, :intro_content, :instruction_time,
       :instruction_content, :practice_time, :practice_content, :working_time, :working_content, :diff_time,
       :diff_support, :diff_enrich, :review_time, :assess_content, :review_content, :status, :user_id)
+    end
+
+    def correct_user
+      @lesson = current_user.lessons.find_by(id: params[:id])
+      redirect_to root_url if @lesson.nil?
     end
 end
