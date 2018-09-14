@@ -2,7 +2,11 @@
 <div class="row">
   <div class="col-md-9">
     <div class="container">
-    <h4> <%= t(".lesson_of") + @user.email %>:</h4>     
+    <% if current_user.id != @user.id %>
+    <h4> <%= t(".lesson_of") + @user.email %>:</h4>    
+    <% elsif %>
+    <h4> <%= t(".your_lesson") %>:</h4> 
+    <% end %>
       <div class="lesson-group">
         <% @lessons.in_groups_of(3) do |group| %>
           <div class="row">

@@ -21,9 +21,7 @@
     <div class="col-md-3">
       <div class="lesson-details bg-white border border-info">
         <div class="filter-button">
-          <% if logged_in? %>
-          <%= submit_tag t(".download"), class: "btn btn-orange", style: "width: 100%" %>
-          <% end %>
+          <%= hidden_field_tag submit_tag t(".download"), class: "btn btn-orange", style: "width: 100%" %>
         </div><br/>
         <p>
           <strong><%= t ".user" %></strong>
@@ -47,8 +45,10 @@
             <%= @lesson.title_unit %>
           </div>
         </div>
-        <% if logged_in? %>
+        <% if logged_in? && current_user == @lesson.user %>
         <%= link_to t(".edit"), edit_lesson_path, class: "lesson-edit", "data-turbolinks" => false %> |
+        <%= link_to t(".delete"), lesson_path, method: :delete, data: { confirm: t(".confirm") }, class: "lesson-delete" %> 
+        <% elsif logged_in? && (current_user.admin? || current_user.id == @lesson.user_id) %>
         <%= link_to t(".delete"), lesson_path, method: :delete, data: { confirm: t(".confirm") }, class: "lesson-delete" %>
         <% end %>
       </div>

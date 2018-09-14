@@ -17,8 +17,12 @@
           <small class="text-muted"><%= time_ago_in_words(lesson.created_at) %><%= t ".ago" %></small>
         </div>
         <div class="col-md-4">
-          <span><%= link_to "", edit_lesson_path(lesson), class: "lesson-edit far fa-edit", "data-turbolinks" => false %></span>&nbsp;
-          <span><%= link_to "", lesson_path(lesson), method: :delete, data: { confirm: "Are you sure?" }, class: "lesson-delete far fa-trash-alt" %></span>
+          <% if user_signed_in? && current_user == lesson.user %>
+          <span><%= link_to "", edit_lesson_path(lesson), title: t(".edit"), class: "lesson-edit far fa-edit", "data-turbolinks" => false %></span>&nbsp;
+          <span><%= link_to "", lesson_path(lesson), title: t(".delete"), method: :delete, data: { confirm: t(".confirm") }, class: "lesson-delete far fa-trash-alt" %></span>
+          <% elsif user_signed_in? && (current_user.admin? || current_user.id == lesson.user_id) %>
+          <span><%= link_to "", lesson_path(lesson), title: t(".delete"), method: :delete, data: { confirm: t(".confirm") }, class: "lesson-delete far fa-trash-alt" %></span>
+          <% end %>
         </div>
       </div>
     </div>
