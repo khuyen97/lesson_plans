@@ -7,6 +7,6 @@ class Lesson < ApplicationRecord
   default_scope -> { order(created_at: :desc) }
   scope :grade_id, -> (grade_id) { where grade_id: grade_id }
   scope :subject_id, -> (subject_id) { where subject_id: subject_id }
-  scope :publish, -> { where status: :draft }
-  scope :draft, -> { where status: :complete }
+  scope :publish, -> { where status: :complete }
+  scope :draft, -> { where status: :draft}
 end
