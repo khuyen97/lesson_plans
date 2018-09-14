@@ -5,7 +5,4 @@ module LessonsHelper
   def subjects_for_select
     Subject.all.collect { |s| [s.name, s.id]}
   end
-  def logged_in?
-    !current_user.nil?
-  end
 end

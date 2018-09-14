@@ -9,12 +9,10 @@
               <%= @lesson.created_at.strftime("%I:%M%p, %d/%m/%Y") %>    
             </span>
           </div>
-          <div style="line-height: 2.5em">
-            <span>
-              <%= image_tag("lesson.png", :alt => "lesson-plan-icon", style: "height: 2.5em") %>
-              <span class="type-lesson-plan"><%= t ".lesson" %> </span>
-              <span class="title-content"><%= @lesson.title_content %></span>
-            </span>    
+          <div id="lesson-title" style="line-height: 2.5em">
+              <%= image_tag("lesson.png", :alt => "lesson-plan-icon", style: "height: 2.5em;") %>
+              <span class="type-lesson-plan"><%= t ".lesson" %></span>
+              <span class="title-content"><%= @lesson.title_content %></span>   
           </div>
         </div><br/>
         <%= render "lesson_details" %>
@@ -23,9 +21,7 @@
     <div class="col-md-3">
       <div class="lesson-details bg-white border border-info">
         <div class="filter-button">
-          <% if logged_in? %>
-          <%= submit_tag t(".download"), class: "btn btn-orange", style: "width: 100%" %>
-          <% end %>
+          <%= hidden_field_tag submit_tag t(".download"), class: "btn btn-orange", style: "width: 100%" %>
         </div><br/>
         <p>
           <strong><%= t ".grade" %></strong>
@@ -45,7 +41,7 @@
             <%= @lesson.title_unit %>
           </div>
         </div>
-        <% if user_signed_in? %>
+        <% if logged_in? && (current_user.admin? || current_user.id == @lesson.user_id) %>
         <%= link_to t(".edit"), edit_lesson_path, class: "lesson-edit", "data-turbolinks" => false %> |
         <%= link_to t(".delete"), lesson_path, method: :delete, data: { confirm: t(".confirm") }, class: "lesson-delete" %>
         <% end %>

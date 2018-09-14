@@ -2,50 +2,49 @@
 <div class="row">
   <div class="col-md-3"></div>
   
+  
   <div class="col-md-6">
-    <h2><%= t(".my_account") %></h2>
+    <div class="lesson-details bg-white border border-info">
+      <h2><%= t(".my_account") %></h2>
 
-    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-      <%= devise_error_messages! %>
-    
-      <div class="form-group">
-        <%= f.label :email, t(".email") %><br />
-        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control form-control-sm" %>
-      </div>
-    
-      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-        <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-      <% end %>
-    
-      <div class="form-group">
-        <%= f.label :password, t(".password") %> <i>(<%= t ".pass_note" %>)</i><br />
-        <%= f.password_field :password, autocomplete: "off", class: "form-control form-control-sm" %>
-        <% if @minimum_password_length %>
-          <br />
-          <em><%= t ".min" %><%= @minimum_password_length %> <%= t ".characters" %></em>
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+        <%= devise_error_messages! %>
+      
+        <div class="form-group">
+          <%= f.label :email, t(".email") %><br />
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control form-control-sm" %>
+        </div>
+      
+        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+          <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
         <% end %>
-      </div>
-    
-      <div class="form-group">
-        <%= f.label :password_confirmation, t(".password_confirmation") %><br />
-        <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control form-control-sm" %>
-      </div>
-    
-      <div class="form-group">
-        <%= f.label :current_password, t(".current_password") %> <i>(<%= t (".passcur_note")%>)</i><br />
-        <%= f.password_field :current_password, autocomplete: "off", class: "form-control form-control-sm" %>
-      </div>
-    
-      <div class="actions">
-        <%= f.submit t(".update"), class: "btn btn-primary", style: "width: 100%" %>
-      </div>
-    <% end %>
-    
-    <h3><%= t ".cancel_account" %></h3>
-    
-    <p><%= t ".unhappy" %> <%= button_to t(".cancel_account"), registration_path(resource_name), data: { confirm: t(".confirm") }, method: :delete %></p>
-    
-    <%= link_to t(".back"), :back %>      
+      
+        <div class="form-group">
+          <%= f.label :password, t(".password") %> <i>(<%= t ".pass_note" %>)</i><br />
+          <%= f.password_field :password, autocomplete: "off", class: "form-control form-control-sm" %>
+          <% if @minimum_password_length %>
+            <br />
+            <em><%= t ".min" %><%= @minimum_password_length %> <%= t ".characters" %></em>
+          <% end %>
+        </div>
+      
+        <div class="form-group">
+          <%= f.label :password_confirmation, t(".password_confirmation") %><br />
+          <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control form-control-sm" %>
+        </div>
+      
+        <div class="form-group">
+          <%= f.label :current_password, t(".current_password") %> <i>(<%= t (".passcur_note")%>)</i><br />
+          <%= f.password_field :current_password, autocomplete: "off", class: "form-control form-control-sm" %>
+        </div>
+      
+        <div class="actions">
+          <%= f.submit t(".update"), class: "btn btn-primary", style: "width: 100%" %>
+        </div>
+      <% end %>
+      
+      <%= link_to t(".back"), :back %>      
+    </div>
   </div>
 
   <div class="col-md-3"></div>

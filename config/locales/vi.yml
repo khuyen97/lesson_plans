@@ -97,9 +97,6 @@ vi:
       new_lesson: "Tạo giáo án mới"
     edit:
       edit_lesson: "Chỉnh sửa giáo án"
-  users:
-    lesson:
-      ago: " trước."
   layouts:
     header:
       lesson: "Giáo án"
@@ -134,8 +131,12 @@ vi:
       back: "Trở lại"
     show:
       show_user: "Xem người dùng"
-      edit: "Chỉnh sửa"
-      back: "Trở lại"
+      your_lesson: "Giáo án của bạn:"
+      editting: "Đang sửa:"
+    lesson:
+      edit: "Sửa"
+      delete: "Xóa"
+      confirm: "Bạn có chắc không?"
   static_pages:
     about:
       about: "Giới thiệu"
