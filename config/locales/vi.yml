@@ -136,5 +136,7 @@ vi:
       show_user: "Xem người dùng"
       edit: "Chỉnh sửa"
       back: "Trở lại"
+      lesson_of: "Giáo án của "
+      draft: "Đang sửa: "
     lesson:
       ago: " trước."

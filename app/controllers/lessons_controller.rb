@@ -67,7 +67,13 @@ class LessonsController < ApplicationController
   def destroy
     @lesson.destroy
     respond_to do |format|
-      format.html{redirect_back fallback_location: root_url, notice: t(".delete_lesson")}
+      format.html do 
+        if URI(request.referer).path == "/lessons/#{params[:id]}"
+          redirect_to root_path, notice: t(".delete_lesson")
+        else 
+          redirect_back fallback_location: root_url, notice: t(".delete_lesson")
+        end
+      end
       format.json { head :no_content }
     end
   end
@@ -87,9 +93,11 @@ class LessonsController < ApplicationController
     end
 
     def correct_user
-      @lesson = current_user.lessons.find_by(id: params[:id])
-      if @lesson.nil? || !current_user.admin?
-        redirect_to root_url 
+      lesson = current_user.lessons.find_by(id: params[:id])
+      if !current_user.admin? 
+        if lesson.nil?
+          redirect_to root_url 
+        end
       end
     end
 end
