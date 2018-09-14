@@ -3,34 +3,34 @@
     <div class="container">
       <div class="row mt-3">
         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-          <h6 class="text-uppercase font-weight-bold">Saokhuee Team</h6>
+          <h6 class="text-uppercase font-weight-bold"><%= t ".name" %></h6>
           <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" >
-          <p>Nhóm xây dựng phần mềm soạn, lưu trữ và chia sẻ giáo án.</p>
+          <p><%= t ".team" %></p>
         </div>
         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-          <h6 class="text-uppercase font-weight-bold">Hỗ trợ</h6>
+          <h6 class="text-uppercase font-weight-bold"><%= t ".help" %></h6>
           <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
           <p>
-            <%= link_to "Giới thiệu phần mềm", about_path, class: "footer_link" %>
+            <%= link_to t(".about"), about_path, class: "footer_link" %>
           </p>
           <p>
-            <%= link_to "Hướng dẫn sử dụng", help_path, class: "footer_link" %>
+            <a href="https://docs.google.com/document/d/1YtjKfEnvngZZxeRl9PCfq3q78KrpjbAlNLt1GrVd5dE/edit?usp=sharing" class="footer_link"><%= t ".use" %></a>
           </p>
         </div>
-        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4" style="margin: 0;"">
-          <h6 class="text-uppercase font-weight-bold">Liên hệ</h6>
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4" style="margin: 0;">
+          <h6 class="text-uppercase font-weight-bold"><%= t ".contact" %></h6>
           <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
           <p>
-            <i class="fa fa-home mr-3"></i> V1-4.5 Home City, 177 Trung Kính, HN </p>
+            <i class="fa fa-home mr-3"></i><%= t ".address" %></p>
           <p>
-            <i class="fa fa-envelope mr-3"></i> lienhe@saokhuee.com </p>
+            <i class="fa fa-envelope mr-3"></i><%= t ".mail" %></p>
           <p>
-            <i class="fa fa-phone mr-3"></i> +84. 888 723 948 </p>
+            <i class="fa fa-phone mr-3"></i><%= t ".phone" %></p>
         </div>
       </div>
     </div>
   </div>
-  <div class="footer-copyright text-center py-3" style="background-color: #464646; color: white;"> Copyright © 2018 SAO KHUE LTD. All rights reserved.
+  <div class="footer-copyright text-center py-3" style="background-color: #464646; color: white;"><%= t ".copyright" %>
     <br/><a href="http://saokhuee.com" class="footer_link"> http://saokhuee.com </a>
   </div>
 </footer>

@@ -73,6 +73,8 @@ vi:
       review: "Tổng kết"
       status: "Trạng thái:"
       save: "Lưu"
+      error: "lỗi"
+      text: " xảy ra khi lưu giáo án."
     filter:
       by_grade: "Theo khối"
       by_subject: "Theo môn học"
@@ -87,12 +89,13 @@ vi:
       download: "Tải giáo án"
       grade: "Khối: "
       subject: "Môn học:"
-      title_lesson: "Bài:"
-      title_unit: "Tiết:"
+      title_lesson: "Bài: "
+      title_unit: "Tiết: "
       edit: "Sửa"
       delete: "Xóa"
       confirm: "Bạn có chắc không?"
       show_lesson: "Xem giáo án"
+      user: "Người tạo: "
     new:
       new_lesson: "Tạo giáo án mới"
     edit:
@@ -108,6 +111,17 @@ vi:
       users: "Người dùng"
     application:
       lesson: "Giáo án"
+    footer:
+      about: "Giới thiệu phần mềm"
+      use: "Hướng dẫn sử dụng"
+      help: "Hỗ trợ"
+      name: "Saokhuee Team"
+      team: "Nhóm xây dựng phần mềm soạn, lưu trữ và chia sẻ giáo án."
+      address: "V1-4.5 Home City, 177 Trung Kính, HN"
+      mail: "lienhe@saokhuee.com"
+      phone: "+84. 888 723 948"
+      copyright: "Copyright © 2018 SAO KHUE LTD. All rights reserved." 
+      contact: "Liên hệ"
   users:
     create:
       create_user: "Người dùng đã được tạo thành công."
@@ -131,8 +145,11 @@ vi:
       back: "Trở lại"
     show:
       show_user: "Xem người dùng"
-      your_lesson: "Giáo án của bạn:"
-      editting: "Đang sửa:"
+      edit: "Chỉnh sửa"
+      back: "Trở lại"
+      lesson_of: "Giáo án của "
+      draft: "Đang sửa: "
+      your_lesson: "Giáo án của bạn"
     lesson:
       edit: "Sửa"
       delete: "Xóa"
@@ -140,6 +157,20 @@ vi:
   static_pages:
     about:
       about: "Giới thiệu"
+      first: "Với mục đích tạo ra môi trường thuận lợi cho việc soạn thảo, lưu trữ và chia sẻ giáo án
+        trong cộng đồng người dạy và học chương trình phổ thông chuẩn quốc gia, ứng dụng
+        Giáo án trực tuyến tạo môi trường để người dạy soạn giáo án và chia sẻ một cách dễ dàng."
+      second: "Các bài học được tổ chức theo môn học và cấp lớp. Trong mỗi bài học, bạn sẽ tìm thấy 
+        các mục tiêu rõ ràng, mô tả các tài liệu cần thiết, một thủ tục toàn diện với việc 
+        mở và đóng, cũng như các đánh giá và sửa đổi. Sứ mệnh của chúng tôi là tiếp tục 
+        trao quyền và thúc đẩy giáo viên. Chúng tôi muốn tôn vinh các giáo viên tận tình của 
+        chúng tôi bằng cách chia sẻ công việc của họ với phần còn lại của thế giới. 
+        Chúng tôi khuyến khích bạn chia sẻ kế hoạch bài học tuyệt vời của riêng bạn với chúng tôi. 
+        Vui lòng liên hệ với chúng tôi để biết thêm thông tin. Bạn có quyền truyền cảm hứng cho tương lai."
+      third: "Ứng dụng vẫn đang trong quá trình phát triển.
+        Chúng tôi rất mong nhận được những ý kiến đóng góp từ người dùng để đội phát triển 
+        hoàn thiện ứng dụng hơn nữa.
+        Xin chân thành cảm ơn!"
+      title: "Ứng dụng soạn thảo và chia sẻ giáo án dành cho giáo viên"
     help:
       help: "Hướng dẫn sử dụng"
-      
