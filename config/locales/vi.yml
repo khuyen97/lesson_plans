@@ -49,6 +49,7 @@ vi:
       update_lesson: "Giáo án đã được cập nhật thành công."
     destroy:
       delete_lesson: "Giáo án đã bị hủy thành công."
+      lessons_uri: "/lessons/"
     index: 
       home: "Trang chủ"
     form:
@@ -76,7 +77,7 @@ vi:
       error: "lỗi"
       text: " xảy ra khi lưu giáo án."
       draft: "Đang chỉnh sửa"
-      complete: "Hoàn thành"
+      complete: "Hoàn thành" 
     filter:
       by_grade: "Theo khối"
       by_subject: "Theo môn học"
@@ -102,6 +103,8 @@ vi:
       new_lesson: "Tạo giáo án mới"
     edit:
       edit_lesson: "Chỉnh sửa giáo án"
+      cant_edit: "Bạn không có quyền sửa."
+      edit: "edit"
   layouts:
     header:
       lesson: "Giáo án"
