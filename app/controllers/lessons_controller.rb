@@ -4,6 +4,7 @@ class LessonsController < ApplicationController
   before_action :set_lesson, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   before_action :correct_user, only: [:destroy, :edit, :update]
+  
 
   # GET /lessons
   # GET /lessons.json
@@ -95,9 +96,12 @@ class LessonsController < ApplicationController
     def correct_user
       lesson = current_user.lessons.find_by(id: params[:id])
       if !current_user.admin? 
-        if lesson.nil?
-          redirect_to root_url 
-        end
+        redirect_to root_url if lesson.nil?
       end
+    end
+
+    # Confirms an admin user.
+    def admin_user
+      redirect_to(root_url) unless current_user.admin?
     end
 end

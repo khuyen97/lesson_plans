@@ -75,6 +75,8 @@ vi:
       save: "Lưu"
       error: "lỗi"
       text: " xảy ra khi lưu giáo án."
+      draft: "Đang chỉnh sửa"
+      complete: "Hoàn thành"
     filter:
       by_grade: "Theo khối"
       by_subject: "Theo môn học"

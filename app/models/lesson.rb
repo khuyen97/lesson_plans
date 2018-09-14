@@ -1,5 +1,5 @@
 class Lesson < ApplicationRecord
-  enum status: [:Nháp, :Xong]
+  enum status: [:draft, :complete]
   belongs_to :user
   belongs_to :grade
   belongs_to :subject
@@ -7,6 +7,6 @@ class Lesson < ApplicationRecord
   default_scope -> { order(created_at: :desc) }
   scope :grade_id, -> (grade_id) { where grade_id: grade_id }
   scope :subject_id, -> (subject_id) { where subject_id: subject_id }
-  scope :publish, -> { where status: :Xong }
-  scope :draft, -> { where status: :Nháp }
+  scope :publish, -> { where status: :draft }
+  scope :draft, -> { where status: :complete }
 end
