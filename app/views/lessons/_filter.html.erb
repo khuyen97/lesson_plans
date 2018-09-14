@@ -1,6 +1,5 @@
 <%= form_tag lessons_path, method: :get do %>    
-  <div class="filter-list">
-    <ul>
+  <div class="filter-list" id="filter-list">
       <div class="card mb-3">      
         <div class="card-header text-white">        
           <li class="title">
@@ -9,14 +8,12 @@
             </a>
           </li>
         </div>
-        <div id="collapseOne" class="collapse" data-parent="#accordion">
+        <div id="collapseOne" class="collapse" data-parent="#filter-list">
           <div class="card-body">
             <%= render "grade" %>
           </div>
         </div>
       </div>
-    </ul>
-    <ul>
       <div class="card mb-3">      
         <div class="card-header text-white">        
           <li class="title">
@@ -25,13 +22,12 @@
             </a>
           </li>
         </div>
-        <div id="collapseTwo" class="collapse" data-parent="#accordion">
+        <div id="collapseTwo" class="collapse" data-parent="#filter-list">
           <div class="card-body">
             <%= render "subject" %>
           </div>
         </div>
       </div>
-    </ul>
     <div class="filter-button"><%= submit_tag t(".filter"), class: "btn btn-orange", style: "width: 100%" %></div>
   </div>
   <br/>
