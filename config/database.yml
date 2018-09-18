@@ -17,8 +17,4 @@ staging:
   <<: *default
 
 production:
-  adapter: postgresql
-  encoding: utf8
-  database: lesson-plans
-  username: root
-  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
+<<: *default
