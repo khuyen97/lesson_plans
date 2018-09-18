@@ -19,9 +19,9 @@
           <%= t ".my_account" %> <b class="caret"></b>
         </a>
         <ul class="dropdown-menu dropdown-menu-right">
-          <li><strong><%= link_to current_user.email, user_path(current_user) %></strong></li>
+          <li id="link_user"><strong><%= link_to current_user.email, user_path(current_user) %></strong></li>
           <li class="dropdown-divider"></li>
-          <li><%= link_to t(".my_account"), edit_user_registration_path, class: "dropdown-item" %></li>
+          <li><%= link_to t(".edit_account"), edit_user_registration_path, class: "dropdown-item" %></li>
           <% if current_user.admin? %>  
             <li><%= link_to t(".users"), users_path, class: "dropdown-item" %></li>
             <li class="dropdown-divider"></li>

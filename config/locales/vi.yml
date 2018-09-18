@@ -7,7 +7,7 @@ vi:
         send_email: "Gửi cho tôi hướng dẫn đặt lại mật khẩu"
     registrations:
       edit:
-        my_account: "Tài khoản của tôi"
+        edit_account: "Chỉnh sửa tài khoản"
         email: "Địa chỉ email"
         password: "Mật khẩu"
         min: "Tối thiểu "
@@ -71,7 +71,7 @@ vi:
       diff_enrich: "Củng cố (với học sinh yếu):"
       review_access: "Đánh giá/ Tổng kết"
       assess: "Đánh giá:"
-      review: "Tổng kết"
+      review: "Tổng kết:"
       status: "Trạng thái:"
       save: "Lưu"
       error: "lỗi"
@@ -105,6 +105,19 @@ vi:
       edit_lesson: "Chỉnh sửa giáo án"
       cant_edit: "Bạn không có quyền sửa."
       edit: "edit"
+    lesson_details:
+      last_lesson: "Kiểm tra bài cũ"
+      object: "Mục tiêu bài mới"
+      intro: "Giới thiệu bài mới"
+      instruction: "Giảng bài"
+      practice: "Tương tác/ Thực hành có hướng dẫn"
+      working: "Học sinh làm việc độc lập"
+      diff: "Nâng cao/ Củng cố"
+      diff_support: "+ Nâng cao (với học sinh khá):"
+      diff_enrich: "+ Củng cố (với học sinh yếu):"
+      review_access: "Đánh giá/ Tổng kết"
+      assess: "+ Đánh giá:"
+      review: "+ Tổng kết:"
   layouts:
     header:
       lesson: "Giáo án"
@@ -112,6 +125,7 @@ vi:
       log_in: "Đăng nhập"
       log_out: "Đăng xuất"
       my_account: "Tài khoản của tôi"
+      edit_account: "Chỉnh sửa tài khoản"
       sign_up: "Đăng ký"
       users: "Người dùng"
     application:
@@ -149,12 +163,13 @@ vi:
       new_user: "Tạo người dùng mới"
       back: "Trở lại"
     show:
+      my_account: "Tài khoản của tôi"
       show_user: "Xem người dùng"
       edit: "Chỉnh sửa"
       back: "Trở lại"
       lesson_of: "Giáo án của "
       draft: "Đang sửa: "
-      your_lesson: "Giáo án của bạn"
+      your_lesson: "Giáo án của tôi"
     lesson:
       edit: "Sửa"
       delete: "Xóa"

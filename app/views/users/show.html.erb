@@ -1,10 +1,15 @@
+<% if current_user.id != @user.id %>
 <% provide(:title, t(".show_user")) %>
+<% else %>
+<% provide(:title, t(".my_account")) %>
+<% end %>
+
 <div class="row">
   <div class="col-md-9">
     <div class="container">
     <% if current_user.id != @user.id %>
     <h4> <%= t(".lesson_of") + @user.email %>:</h4>    
-    <% elsif %>
+    <% else %>
     <h4> <%= t(".your_lesson") %>:</h4> 
     <% end %>
       <div class="lesson-group">
