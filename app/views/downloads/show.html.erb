@@ -1,0 +1,30 @@
+<%= render "lessons/lesson_details", lesson: @lesson %>
+<div class="lesson-details bg-white border border-info">
+  <div class="row">
+    <div class="col-md">
+      <strong><%= t ".user" %></strong>
+      <%= link_to @lesson.user.email, user_path(@lesson.user) %>
+    </div>
+    <div class="col-md">
+      <strong><%= t ".grade" %></strong>
+      <%= @lesson.grade.name %>
+    </div>
+
+    <div class="col-md">
+      <strong><%= t ".subject" %></strong>
+      <%= @lesson.subject.name %>
+    </div>
+
+    <div class="col-md">
+      <strong><%= t ".title_lesson" %></strong>
+      <%= @lesson.title_lesson %>
+    </div>
+    <div class="col-md">
+      <strong><%= t ".title_unit" %></strong>
+      <%= @lesson.title_unit %>
+    </div>
+    <div class="col-md text-center">
+      <span class="text-muted">https://lesson-plans.herokuapp.com/</span>
+    </div>
+  </div>
+</div>

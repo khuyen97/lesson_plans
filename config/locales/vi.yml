@@ -105,6 +105,8 @@ vi:
       edit_lesson: "Chỉnh sửa giáo án"
       cant_edit: "Bạn không có quyền sửa."
       edit: "edit"
+    lesson_details:
+      lesson: "Giáo án: "
   layouts:
     header:
       lesson: "Giáo án"
@@ -179,3 +181,11 @@ vi:
       title: "Ứng dụng soạn thảo và chia sẻ giáo án dành cho giáo viên"
     help:
       help: "Hướng dẫn sử dụng"
+  downloads:
+    show:
+      lesson: "Giáo án: "
+      grade: "Khối: "
+      subject: "Môn học:"
+      title_lesson: "Bài: "
+      title_unit: "Tiết: "
+      user: "Người tạo: "
