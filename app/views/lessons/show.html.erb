@@ -1,27 +1,14 @@
 <% provide(:title, t(".show_lesson")) %>
 <div class="container">
   <div class="row">
-    <div class="col-md-9">
-      <div class="lesson-details bg-white border border-info">
-        <div class="lesson-title boder border-bottom border-light">
-          <div>
-            <span class="lesson-time text-muted">
-              <%= @lesson.created_at.strftime("%I:%M%p, %d/%m/%Y") %>    
-            </span>
-          </div>
-          <div id="lesson-title" style="line-height: 2.5em">
-              <%= image_tag("lesson.png", :alt => "lesson-plan-icon", style: "height: 2.5em;") %>
-              <span class="type-lesson-plan"><%= t ".lesson" %></span>
-              <span class="title-content"><%= @lesson.title_content %></span>   
-          </div>
-        </div><br/>
-        <%= render "lesson_details" %>
-      </div>
+    <div class="col-md-9">      
+      <%= render "lesson_details" %>
     </div>
     <div class="col-md-3">
       <div class="lesson-details bg-white border border-info">
         <div class="filter-button">
-          <%= hidden_field_tag submit_tag t(".download"), class: "btn btn-orange", style: "width: 100%" %>
+          <%= link_to t(".download"), lesson_downloads_path(@lesson, format: "pdf"), 
+            target: :_blank, class: "btn btn-orange", style: "width: 100%" %>
         </div><br/>
         <p>
           <strong><%= t ".user" %></strong>

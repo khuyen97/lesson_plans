@@ -17,7 +17,7 @@
     </div>
     <div class="form-group col-md">
       <%= form.label :subject, t(".subject"), class: "col-form-label" %>
-      <%= form.collection_select :subject_id, Subject.all, :id, :name, {}, class: " form-control form-control-sm custom-select" %>
+      <%= form.collection_select :subject_id, Subject.all, :id, :name, {}, class: "form-control form-control-sm custom-select" %>
     </div>
     <div class="form-group col-md">
       <%= form.label :title_lesson, t(".title_lesson"), class: "col-form-label" %>
