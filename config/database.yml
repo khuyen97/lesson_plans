@@ -3,8 +3,8 @@ default: &default
   encoding: utf8
   pool: 5
   host: localhost
-  database: lesson-plans
-  username: root
+  database: lesson_plans
+  username: huyen
   password: "123456"
 development:
   <<: *default

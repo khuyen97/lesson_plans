@@ -14,6 +14,7 @@ class LessonsController < ApplicationController
     @lessons = Lesson.publish
     @lessons = @lessons.grade_id(params[:grade_id]) if params[:grade_id].present?
     @lessons = @lessons.subject_id(params[:subject_id]) if params[:subject_id].present?
+    @lessons = @lessons.search(params[:search]) if params[:search].present?
   end
   # GET /lessons/1
   # GET /lessons/1.json
