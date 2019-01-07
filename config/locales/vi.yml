@@ -49,6 +49,7 @@ vi:
       update_lesson: "Giáo án đã được cập nhật thành công."
     destroy:
       delete_lesson: "Giáo án đã bị hủy thành công."
+      lessons_uri: "/lessons/"
     index: 
       home: "Trang chủ"
     form:
@@ -75,6 +76,8 @@ vi:
       save: "Lưu"
       error: "lỗi"
       text: " xảy ra khi lưu giáo án."
+      draft: "Đang chỉnh sửa"
+      complete: "Hoàn thành" 
     filter:
       by_grade: "Theo khối"
       by_subject: "Theo môn học"
@@ -100,6 +103,10 @@ vi:
       new_lesson: "Tạo giáo án mới"
     edit:
       edit_lesson: "Chỉnh sửa giáo án"
+      cant_edit: "Bạn không có quyền sửa."
+      edit: "edit"
+    lesson_details:
+      lesson: "Giáo án: "
   layouts:
     header:
       lesson: "Giáo án"
@@ -174,4 +181,11 @@ vi:
       title: "Ứng dụng soạn thảo và chia sẻ giáo án dành cho giáo viên"
     help:
       help: "Hướng dẫn sử dụng"
-      
+  downloads:
+    show:
+      lesson: "Giáo án: "
+      grade: "Khối: "
+      subject: "Môn học:"
+      title_lesson: "Bài: "
+      title_unit: "Tiết: "
+      user: "Người tạo: "
