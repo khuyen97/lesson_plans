@@ -15,6 +15,7 @@ class LessonsController < ApplicationController
     @lessons = @lessons.grade_id(params[:grade_id]) if params[:grade_id].present?
     @lessons = @lessons.subject_id(params[:subject_id]) if params[:subject_id].present?
     @lessons = @lessons.search(params[:search]) if params[:search].present?
+    @lessons = @lessons.paginate(:page => params[:page], :per_page => 6).order('created_at desc')
   end
   # GET /lessons/1
   # GET /lessons/1.json

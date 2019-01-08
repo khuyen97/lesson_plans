@@ -254,7 +254,7 @@ h2, h1 {
 }
 
 #search {
-  
+  position: relative;
 }
 
 #search input[type="text"] {
@@ -276,9 +276,29 @@ h2, h1 {
   transition: all 0.7s ease 0s;
 }
 
+#search button {
+  position: absolute;
+  top: 7px;
+  left: 10px;
+  border: none;
+  background: transparent;
+  padding: 0;
+  color: #17a2b8;
+  cursor: pointer;
+}
+
+#search button:focus {
+  outline: none;
+}
+
 #search input[type="text"]:focus {
   width: 100%;
   outline: none;
+}
+
+.pagination li.active {
+  text-decoration: underline;
+  font-weight: bold;
 }
 
 .or-area {

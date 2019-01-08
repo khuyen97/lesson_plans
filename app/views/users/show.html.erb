@@ -12,11 +12,12 @@
     <h4> <%= t(".your_lesson") %>:</h4> 
     <% end %>
       <div class="lesson-group">
-        <% @lessons.in_groups_of(3) do |group| %>
+        <% @publish_lessons.in_groups_of(3) do |group| %>
           <div class="row">
             <%= render partial: "lessons/lesson", collection: group.compact, as: :lesson %>
           </div>
         <% end %>
+        <%= will_paginate @publish_lessons, :param_name => 'publish_page'%>
       </div>
     </div>
   </div>
@@ -29,6 +30,7 @@
           <%= render partial: "lesson", collection: group.compact, as: :lesson %>
           </div>
         <% end %>
+        <%= will_paginate @draft_lessons, :param_name => 'draft_page'%>
       </div>
     </div>
   </div>

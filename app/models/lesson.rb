@@ -9,5 +9,5 @@ class Lesson < ApplicationRecord
   scope :subject_id, -> (subject_id) { where subject_id: subject_id }
   scope :search, -> (search) { where("title_content LIKE :query", query: "%#{search}%") }
   scope :publish, -> { where status: :complete }
-  scope :draft, -> { where status: :draft}
+  scope :draft, -> { where status: :draft }
 end

@@ -183,6 +183,7 @@ vi:
       edit: "Sửa"
       delete: "Xóa"
       confirm: "Bạn có chắc không?"
+      ago: " trước"
   static_pages:
     about:
       about: "Giới thiệu"
@@ -211,3 +212,6 @@ vi:
       title_lesson: "Bài: "
       title_unit: "Tiết: "
       user: "Người tạo: "
+  will_paginate:
+    previous_label: "Trước"
+    next_label: "Sau"
