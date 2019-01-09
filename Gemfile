@@ -6,8 +6,9 @@ ruby '2.4.2'
 gem 'devise'
 gem "omniauth"
 gem "omniauth-google-oauth2"
-gem "omniauth-facebook"
 gem "figaro"
+gem 'pdfkit'
+gem 'wkhtmltopdf-binary'
 
 gem 'rails-i18n'
 gem 'mini_magick'

@@ -17,7 +17,7 @@
     </div>
     <div class="form-group col-md">
       <%= form.label :subject, t(".subject"), class: "col-form-label" %>
-      <%= form.collection_select :subject_id, Subject.all, :id, :name, {}, class: " form-control form-control-sm custom-select" %>
+      <%= form.collection_select :subject_id, Subject.all, :id, :name, {}, class: "form-control form-control-sm custom-select" %>
     </div>
     <div class="form-group col-md">
       <%= form.label :title_lesson, t(".title_lesson"), class: "col-form-label" %>
@@ -85,8 +85,8 @@
   </div>
   <div class="row">
     <div class="form-group col-md">
-      <%= form.label :istruction_content, t(".content"), class: "col-form-label" %>
-      <%= form.text_area :istruction_content, class: "ckeditor" %>
+      <%= form.label :instruction_content, t(".content"), class: "col-form-label" %>
+      <%= form.text_area :instruction_content, class: "ckeditor" %>
     </div>
   </div>
 
@@ -166,7 +166,7 @@
   <div class="row">
     <div class="form-group col-md">
       <%= form.label :status,  t(".status"), class: "col-form-label" %>
-      <%= form.select :status, options_for_select(Lesson.statuses.keys), {}, class: "form-control form-control-sm custom-select" %>
+      <%= form.select :status, options_for_select([[t(".draft"), :draft], [t(".complete"), :complete]]), {}, class: "form-control form-control-sm custom-select" %>
     </div>
   </div>
   

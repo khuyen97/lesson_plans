@@ -12,8 +12,8 @@ grades.each do |grade|
     Grade.create!(name:  grade)
 end
 
-subjects = ["Toán", "Vật lí", "Hóa học", "Sinh học", "Tiếng Anh",
-           "Ngữ Văn", "Tiếng Việt", "Lịch sử", "Địa lí"].sort!
+subjects = [ "Tự nhiên xã hội", "Khoa học" , "Âm nhạc", "Mỹ thuật", "Đạo đức", "Thể dục", "Tin học", "Toán", "Vật lí", "Hóa học", "Sinh học", "Tiếng Anh",
+           "Ngữ Văn", "Tiếng Việt", "Lịch sử", "Địa lí", "Công nghệ", "Giáo dục Công dân", "Giáo dục quốc phòng"].sort!
 subjects.each do |subject|
     Subject.create!(name: subject)
 end

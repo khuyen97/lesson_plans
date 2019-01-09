@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  include UsersHelper
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
   before_action :correct_user, only: [:edit, :update]
@@ -16,7 +17,9 @@ class UsersController < ApplicationController
     @user = User.find params[:id]
     @lessons = @user.lessons
     @publish_lessons = @lessons.publish
+    @publish_lessons = @publish_lessons.paginate(:page => params[:publish_page], :per_page => 6).order('created_at desc')
     @draft_lessons = @lessons.draft
+    @draft_lessons = @draft_lessons.paginate(:page => params[:draft_page], :per_page => 2).order('created_at desc')
   end
 
   # GET /users/new
@@ -82,7 +85,7 @@ class UsersController < ApplicationController
     # Confirms the correct user.
     def correct_user
       @user = User.find(params[:id])
-      redirect_to(root_url) unless current_user?(@user)
+      redirect_to(root_url) unless (current_user?(@user) || current_user.admin?)
     end
 
     # Confirms an admin user.

@@ -1,10 +1,10 @@
-<% provide(:title, t(".my_account")) %>
+<% provide(:title, t(".edit_account")) %>
 <div class="row">
   <div class="col-md-3"></div>
   
   <div class="col-md-6">
     <div class="lesson-details bg-white border border-info">
-      <h2><%= t(".my_account") %></h2>
+      <h2><%= t(".edit_account") %></h2>
 
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
         <%= devise_error_messages! %>

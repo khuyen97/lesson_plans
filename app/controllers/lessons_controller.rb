@@ -4,6 +4,7 @@ class LessonsController < ApplicationController
   before_action :set_lesson, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   before_action :correct_user, only: [:destroy, :edit, :update]
+  
 
   # GET /lessons
   # GET /lessons.json
@@ -13,6 +14,8 @@ class LessonsController < ApplicationController
     @lessons = Lesson.publish
     @lessons = @lessons.grade_id(params[:grade_id]) if params[:grade_id].present?
     @lessons = @lessons.subject_id(params[:subject_id]) if params[:subject_id].present?
+    @lessons = @lessons.search(params[:search]) if params[:search].present?
+    @lessons = @lessons.paginate(:page => params[:page], :per_page => 6).order('created_at desc')
   end
   # GET /lessons/1
   # GET /lessons/1.json
@@ -68,7 +71,7 @@ class LessonsController < ApplicationController
     @lesson.destroy
     respond_to do |format|
       format.html do 
-        if URI(request.referer).path == "/lessons/#{params[:id]}"
+        if URI(request.referer).path == t(".lessons_uri") + params[:id]
           redirect_to root_path, notice: t(".delete_lesson")
         else 
           redirect_back fallback_location: root_url, notice: t(".delete_lesson")
@@ -94,9 +97,13 @@ class LessonsController < ApplicationController
 
     def correct_user
       lesson = current_user.lessons.find_by(id: params[:id])
-      if !current_user.admin? 
-        if lesson.nil?
-          redirect_to root_url 
+      if lesson.nil?
+        if !current_user.admin?
+          redirect_to root_path, notice: t(".cant_edit")
+        else
+          if params[:action] == t(".edit")
+            redirect_to root_path, notice: t(".cant_edit")            
+          end
         end
       end
     end
