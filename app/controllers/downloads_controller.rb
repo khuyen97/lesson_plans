@@ -2,9 +2,10 @@ class DownloadsController < ApplicationController
   before_action :get_lesson, only: [:index, :show]
 
   def show
+    byebug
     respond_to do |format|
-      format.pdf { send_lesson_pdf }
-      format.html { render_sample_html } if Rails.env.development?
+      format.pdf do { send_lesson_pdf }
+      format.html { render_sample_html }
     end
   end
 
@@ -14,13 +15,13 @@ class DownloadsController < ApplicationController
     @lesson = Lesson.find_by id: params[:lesson_id]
   end
 
-  def create_user_pdf
-    PdfService.new lesson
+  def create_lesson_pdf
+    PdfService.new @lesson
   end
 
-  def send_user_pdf
+  def send_lesson_pdf
     send_file create_lesson_pdf.to_pdf,
-      filename: lesson_pdf.filename,
+      filename: create_lesson_pdf.filename,
       type: "application/pdf",
       disposition: "inline"
   end

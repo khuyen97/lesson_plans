@@ -12,11 +12,10 @@ class PdfService
     "#{lesson.title_content}.pdf"
   end
 
-  private
-    attr_reader :lesson
+  attr_reader :lesson
 
-    def as_html
-      render template: "downloads/show", layout: "lesson_pdf",
-          locals: {lesson: lesson}
-    end
+  def as_html
+    render template: "downloads/show", layout: "lesson_pdf",
+        locals: {lesson: lesson}
+  end
 end
