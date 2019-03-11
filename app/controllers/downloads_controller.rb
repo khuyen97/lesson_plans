@@ -4,7 +4,7 @@ class DownloadsController < ApplicationController
   def show
     byebug
     respond_to do |format|
-      format.pdf do { send_lesson_pdf }
+      format.pdf { send_lesson_pdf }
       format.html { render_sample_html }
     end
   end
