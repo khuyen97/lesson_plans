@@ -2,7 +2,6 @@ class DownloadsController < ApplicationController
   before_action :get_lesson, only: [:index, :show]
 
   def show
-    byebug
     respond_to do |format|
       format.pdf { send_lesson_pdf }
       format.html { render_sample_html }
