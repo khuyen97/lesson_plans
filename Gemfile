@@ -7,7 +7,7 @@ gem 'devise'
 gem "omniauth"
 gem "omniauth-google-oauth2"
 gem "figaro"
-gem 'pdfkit'
+gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
 
 gem 'rails-i18n'
