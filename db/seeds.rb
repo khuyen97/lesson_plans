@@ -9,16 +9,16 @@
 grades = ["Lớp 1","Lớp 2","Lớp 3","Lớp 4","Lớp 5","Lớp 6", "Lớp 7",
          "Lớp 8", "Lớp 9", "Lớp 10", "Lớp 11", "Lớp 12"]
 grades.each do |grade|
-    Grade.create!(name:  grade)
+    Grade.create!(name: grade) if Grade.where(name: grade).empty?
 end
 
 subjects = [ "Tự nhiên xã hội", "Khoa học" , "Âm nhạc", "Mỹ thuật", "Đạo đức", "Thể dục", "Tin học", "Toán", "Vật lí", "Hóa học", "Sinh học", "Tiếng Anh",
            "Ngữ Văn", "Tiếng Việt", "Lịch sử", "Địa lí", "Công nghệ", "Giáo dục Công dân", "Giáo dục quốc phòng"].sort!
 subjects.each do |subject|
-    Subject.create!(name: subject)
+    Subject.create!(name: subject) if Subject.where(name: subject).empty?
 end
  
 User.create!(email: "admin@gmail.com",
     password: "password",
     password_confirmation: "password",
-    admin: true)
+    admin: true) if User.where(email: "admin@gmail.com").empty?
