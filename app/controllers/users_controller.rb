@@ -17,9 +17,9 @@ class UsersController < ApplicationController
     @user = User.find params[:id]
     @lessons = @user.lessons
     @publish_lessons = @lessons.publish
-    @publish_lessons = @publish_lessons.paginate(:page => params[:publish_page], :per_page => 6).order('created_at desc')
+    @publish_lessons = @publish_lessons.paginate(:page => params[:publish_page], :per_page => 12).order('created_at desc')
     @draft_lessons = @lessons.draft
-    @draft_lessons = @draft_lessons.paginate(:page => params[:draft_page], :per_page => 2).order('created_at desc')
+    @draft_lessons = @draft_lessons.paginate(:page => params[:draft_page], :per_page => 5).order('created_at desc')
     draft_page = params[:draft_page].nil? ? 1 : params[:draft_page].to_i
     publish_page = params[:publish_page].nil? ? 1 : params[:publish_page].to_i
     if draft_page > @draft_lessons.total_pages or publish_page > @publish_lessons.total_pages
