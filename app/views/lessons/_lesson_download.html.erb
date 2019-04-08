@@ -6,8 +6,8 @@
       </span>
     </div>
     <div id="lesson-title" style="line-height: 2.5em">
-      <%= image_tag("lesson.png", :alt => "lesson-plan-icon", style: "height: 2.5em;") %>
-      <span class="type-lesson-plan"><%= t ".lesson" %></span>
+      <%= wicked_pdf_image_tag('lesson.png', style: "height: 2.5em") %>
+      <span class="type-lesson-plan"><%= t (".lesson") %></span>
       <span class="title-content"><%= @lesson.title_content %></span>   
     </div>
   </div><br/>

@@ -1,11 +1,15 @@
 <% @grades.each do |grade| %>
   <% if params[:grade_id] == grade.id.to_s %>
     <li>
-      <%= check_box_tag "grade_id", grade.id, true %><span><%= grade.name %></span>
+      <%= check_box_tag "grade_id", grade.id, true %>
+      <span><%= grade.name %></span>
+      <span class="text-muted" title="<%= t ".count" %>">(<%= grade.lessons.where(:status => 1).count %>)</span>
     </li>
   <% else %>
     <li>
-      <%= check_box_tag "grade_id", grade.id %><span><%= grade.name %></span>
+      <%= check_box_tag "grade_id", grade.id %>
+      <span><%= grade.name %></span>
+      <span class="text-muted" title="<%= t ".count" %>">(<%= grade.lessons.where(:status => 1).count %>)</span>
     </li>
   <% end %>
 <% end %>

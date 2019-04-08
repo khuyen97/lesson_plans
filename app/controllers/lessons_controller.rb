@@ -15,11 +15,13 @@ class LessonsController < ApplicationController
     @lessons = @lessons.grade_id(params[:grade_id]) if params[:grade_id].present?
     @lessons = @lessons.subject_id(params[:subject_id]) if params[:subject_id].present?
     @lessons = @lessons.search(params[:search]) if params[:search].present?
-    @lessons = @lessons.paginate(:page => params[:page], :per_page => 6).order('created_at desc')
+    @lessons = @lessons.paginate(:page => params[:page], :per_page => 15).order('created_at desc')
   end
-  # GET /lessons/1
+  
+  # GET /lessons/1  
   # GET /lessons/1.json
   def show
+    redirect_to root_path if (current_user.nil?) || (!current_user.admin? && current_user.id != @lesson.user_id && @lesson.status == "draft")
   end
 
   # GET /lessons/new

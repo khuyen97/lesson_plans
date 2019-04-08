@@ -303,8 +303,5 @@ DEPENDENCIES
   will_paginate
   wkhtmltopdf-binary
 
-RUBY VERSION
-   ruby 2.4.2p198
-
 BUNDLED WITH
    1.17.2

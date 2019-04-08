@@ -47,6 +47,13 @@ vi:
         google: "Đăng nhập bằng tài khoản google"
         dont_account: "Bạn chưa có tài khoản?"
         have_account: "Bạn đã có tài khoản?"
+  downloads:
+    show:
+      user: "Người tạo: "
+      grade: "Khối: "
+      subject: "Môn học: "
+      title_lesson: "Bài: "
+      title_unit: "Tiết: "
   lessons:
     create: 
       create_lesson: "Giáo án đã được tạo thành công."
@@ -124,9 +131,27 @@ vi:
       review_assess: "Đánh giá/ Tổng kết"
       assess: "+ Đánh giá:"
       review: "+ Tổng kết:"
+    lesson_download:
+      lesson: "Giáo án: "
+      last_lesson: "Kiểm tra bài cũ"
+      object: "Mục tiêu bài mới"
+      intro: "Giới thiệu bài mới"
+      instruction: "Giảng bài"
+      practice: "Tương tác/ Thực hành có hướng dẫn"
+      working: "Học sinh làm việc độc lập"
+      diff: "Nâng cao/ Củng cố"
+      diff_support: "+ Nâng cao (với học sinh khá):"
+      diff_enrich: "+ Củng cố (với học sinh yếu):"
+      review_assess: "Đánh giá/ Tổng kết"
+      assess: "+ Đánh giá:"
+      review: "+ Tổng kết:"
     search:
       search: "Tìm kiếm..."
       search_info: "Tìm kiếm theo tên giáo án"
+    subject:
+      count: "Số giáo án"
+    grade:
+      count: "Số giáo án"
   layouts:
     header:
       lesson: "Giáo án"
@@ -143,9 +168,9 @@ vi:
       about: "Giới thiệu phần mềm"
       use: "Hướng dẫn sử dụng"
       help: "Hỗ trợ"
-      name: "Saokhuee Team"
-      team: "Nhóm xây dựng phần mềm soạn, lưu trữ và chia sẻ giáo án."
-      address: "V1-4.5 Home City, 177 Trung Kính, HN"
+      name: "Saokhuee"
+      team: "Phần mềm soạn thảo, lưu trữ và chia sẻ giáo án."
+      address: "V1-4.5 Home City, 177 Trung Kính, Hà Nội"
       mail: "lienhe@saokhuee.com"
       phone: "+84. 888 723 948"
       copyright: "Copyright © 2018 SAO KHUE LTD. All rights reserved." 
@@ -198,20 +223,12 @@ vi:
         Chúng tôi khuyến khích bạn chia sẻ kế hoạch bài học tuyệt vời của riêng bạn với chúng tôi. 
         Vui lòng liên hệ với chúng tôi để biết thêm thông tin. Bạn có quyền truyền cảm hứng cho tương lai."
       third: "Ứng dụng vẫn đang trong quá trình phát triển.
-        Chúng tôi rất mong nhận được những ý kiến đóng góp từ người dùng để đội phát triển 
-        hoàn thiện ứng dụng hơn nữa.
+        Rất mong nhận được những ý kiến đóng góp từ người dùng để có thể phát triển, hoàn thiện ứng dụng hơn nữa.
         Xin chân thành cảm ơn!"
       title: "Ứng dụng soạn thảo và chia sẻ giáo án dành cho giáo viên"
     help:
       help: "Hướng dẫn sử dụng"
-  downloads:
-    show:
-      lesson: "Giáo án: "
-      grade: "Khối: "
-      subject: "Môn học:"
-      title_lesson: "Bài: "
-      title_unit: "Tiết: "
-      user: "Người tạo: "
+  
   will_paginate:
     previous_label: "Trước"
     next_label: "Sau"

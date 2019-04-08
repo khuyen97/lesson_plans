@@ -1,26 +1,26 @@
-<%= render "lessons/lesson_details", lesson: @lesson %>
+<%= render "lessons/lesson_download", lesson: @lesson %>
 <div class="lesson-details bg-white border border-info">
   <div class="row">
     <div class="col-md">
-      <strong><%= t ".user" %></strong>
+      <strong>Người tạo: </strong>
       <%= link_to @lesson.user.email, user_path(@lesson.user) %>
     </div>
     <div class="col-md">
-      <strong><%= t ".grade" %></strong>
+      <strong>Khối: </strong>
       <%= @lesson.grade.name %>
     </div>
 
     <div class="col-md">
-      <strong><%= t ".subject" %></strong>
+      <strong>Môn học: </strong>
       <%= @lesson.subject.name %>
     </div>
 
     <div class="col-md">
-      <strong><%= t ".title_lesson" %></strong>
+      <strong>Bài: </strong>
       <%= @lesson.title_lesson %>
     </div>
     <div class="col-md">
-      <strong><%= t ".title_unit" %></strong>
+      <strong>Tiết: </strong>
       <%= @lesson.title_unit %>
     </div>
     <div class="col-md text-center">
