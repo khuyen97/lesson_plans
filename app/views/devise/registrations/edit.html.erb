@@ -11,7 +11,7 @@
       
         <div class="form-group">
           <%= f.label :email, t(".email") %><br />
-          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control form-control-sm" %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control form-control-sm", disabled: "disabled" %>
         </div>
       
         <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
