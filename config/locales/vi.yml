@@ -147,6 +147,8 @@ vi:
       review_assess: "Đánh giá/ Tổng kết"
       assess: "+ Đánh giá:"
       review: "+ Tổng kết:"
+      create_time: "Ngày tạo: "
+      update_time: "Đã chỉnh sửa: "
     search:
       search: "Tìm kiếm..."
       search_info: "Tìm kiếm theo tên giáo án"
