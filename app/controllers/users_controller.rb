@@ -9,6 +9,7 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.all
+    @users = @users.paginate(:page => params[:page], :per_page => 15).order('id asc')
   end
 
   # GET /users/1
@@ -17,7 +18,7 @@ class UsersController < ApplicationController
     @user = User.find params[:id]
     @lessons = @user.lessons
     @publish_lessons = @lessons.publish
-    @publish_lessons = @publish_lessons.paginate(:page => params[:publish_page], :per_page => 12).order('created_at desc')
+    @publish_lessons = @publish_lessons.paginate(:page => params[:publish_page], :per_page => 15).order('created_at desc')
     @draft_lessons = @lessons.draft
     @draft_lessons = @draft_lessons.paginate(:page => params[:draft_page], :per_page => 5).order('created_at desc')
     draft_page = params[:draft_page].nil? ? 1 : params[:draft_page].to_i

@@ -60,7 +60,7 @@ vi:
     update:
       update_lesson: "Giáo án đã được cập nhật thành công."
     destroy:
-      delete_lesson: "Giáo án đã bị hủy thành công."
+      delete_lesson: "Giáo án đã bị xóa thành công."
       lessons_uri: "/lessons/"
     index: 
       home: "Trang chủ"
@@ -131,6 +131,8 @@ vi:
       review_assess: "Đánh giá/ Tổng kết"
       assess: "+ Đánh giá:"
       review: "+ Tổng kết:"
+      create_time: "Ngày tạo: "
+      update_time: "Đã chỉnh sửa: "
     lesson_download:
       lesson: "Giáo án: "
       last_lesson: "Kiểm tra bài cũ"
@@ -145,6 +147,8 @@ vi:
       review_assess: "Đánh giá/ Tổng kết"
       assess: "+ Đánh giá:"
       review: "+ Tổng kết:"
+      create_time: "Ngày tạo: "
+      update_time: "Đã chỉnh sửa: "
     search:
       search: "Tìm kiếm..."
       search_info: "Tìm kiếm theo tên giáo án"
@@ -181,16 +185,16 @@ vi:
     update:
       update_user: "Người dùng đã được cập nhật thành công."
     destroy:
-      delete_user: "Người dùng đã bị hủy thành công."
+      delete_user: "Người dùng đã bị xóa thành công."
     edit:
       edit_user: "Chỉnh sửa người dùng"
       show: "Chi tiết"
       back: "Trở lại"
     index:
-      users: "Tất cả người dùng"
+      users: "Danh sách người dùng"
       show: "Chi tiết"
       edit: "Chỉnh sửa"
-      destroy: "Hủy"
+      destroy: "Xóa"
       confirm: "Bạn có chắc không?"
       new_user: "Tạo người dùng mới"
     new:
